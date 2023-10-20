@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>explainerdashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+<div><H1>Diabetes Prediction</H1></div><ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item" role="presentation">
+    <button class="nav-link active" id="myTab0-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab0" role="tab"
+    aria-selected="true" aria-controls="myTab0">Feature Importances</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab1-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab1" role="tab"
+    aria-selected="false" aria-controls="myTab1">Regression Stats</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab2-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab2" role="tab"
+    aria-selected="false" aria-controls="myTab2">Individual Predictions</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab3-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab3" role="tab"
+    aria-selected="false" aria-controls="myTab3">Feature Dependence</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab4-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab4" role="tab"
+    aria-selected="false" aria-controls="myTab4">Feature Interactions</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab5-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab5" role="tab"
+    aria-selected="false" aria-controls="myTab5">Decision Trees</button>
+</li>
+
+</ul>
+
+<div class="tab-content" id="myTabContent">
+
+
+<div class="tab-pane active" id="myTab0"
+     role="tabpanel" aria-labelledby="myTab0-tab"> <div></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Feature Importances</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="f4dc68d7-862b-4d77-b9b0-9bd626a104f3" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f4dc68d7-862b-4d77-b9b0-9bd626a104f3")) {                    Plotly.newPlot(                        "f4dc68d7-862b-4d77-b9b0-9bd626a104f3",                        [{"hoverinfo":"text","orientation":"h","x":[1.0719906760057445,1.3236260817011998,1.3240175710949764,1.9010029275054703,2.7945396179567967,3.240682450860324,3.5510693392923813,8.286648452870244,24.256446687985818,28.175278565620527],"y":["10. s2","9. sex","8. s1","7. s4","6. age","5. s6","4. s3","3. bp","2. s5","1. bmi"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted target<br>(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":400,"margin":{"b":40,"l":21,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+<div></div>
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab1"
+     role="tabpanel" aria-labelledby="myTab1-tab"> <div></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Model Summary</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">metric</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>mean-squared-error</td>
+      <td>3436.01</td>
+    </tr>
+    <tr>
+      <td>root-mean-squared-error</td>
+      <td>58.617</td>
+    </tr>
+    <tr>
+      <td>mean-absolute-error</td>
+      <td>45.036</td>
+    </tr>
+    <tr>
+      <td>mean-absolute-percentage-error</td>
+      <td>0.353</td>
+    </tr>
+    <tr>
+      <td>R-squared</td>
+      <td>0.355</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Predicted vs Actual</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="774455e9-5cf9-40bc-b3c0-ab2c62339092" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("774455e9-5cf9-40bc-b3c0-ab2c62339092")) {                    Plotly.newPlot(                        "774455e9-5cf9-40bc-b3c0-ab2c62339092",                        [{"hoverinfo":"text","mode":"markers","name":"","text":["Index: 246<br>Observed: 78.000<br>Prediction: 148.757","Index: 425<br>Observed: 152.000<br>Prediction: 109.362","Index: 293<br>Observed: 200.000<br>Prediction: 163.269","Index: 31<br>Observed: 59.000<br>Prediction: 84.158","Index: 359<br>Observed: 311.000<br>Prediction: 168.571","Index: 437<br>Observed: 178.000<br>Prediction: 242.909","Index: 290<br>Observed: 332.000<br>Prediction: 241.443","Index: 439<br>Observed: 132.000<br>Prediction: 101.904","Index: 284<br>Observed: 156.000<br>Prediction: 147.518","Index: 4<br>Observed: 135.000<br>Prediction: 94.272","Index: 440<br>Observed: 220.000<br>Prediction: 171.743","Index: 285<br>Observed: 233.000<br>Prediction: 178.561","Index: 192<br>Observed: 91.000<br>Prediction: 99.800","Index: 389<br>Observed: 51.000<br>Prediction: 83.482","Index: 159<br>Observed: 195.000<br>Prediction: 251.903","Index: 310<br>Observed: 109.000<br>Prediction: 209.265","Index: 375<br>Observed: 217.000<br>Prediction: 195.816","Index: 429<br>Observed: 94.000<br>Prediction: 97.681","Index: 258<br>Observed: 89.000<br>Prediction: 120.706","Index: 424<br>Observed: 111.000<br>Prediction: 179.724","Index: 197<br>Observed: 129.000<br>Prediction: 174.230","Index: 283<br>Observed: 181.000<br>Prediction: 79.591","Index: 373<br>Observed: 168.000<br>Prediction: 98.305","Index: 5<br>Observed: 97.000<br>Prediction: 102.975","Index: 128<br>Observed: 115.000<br>Prediction: 94.860","Index: 207<br>Observed: 202.000<br>Prediction: 216.255","Index: 292<br>Observed: 84.000<br>Prediction: 84.908","Index: 314<br>Observed: 147.000<br>Prediction: 140.423","Index: 304<br>Observed: 253.000<br>Prediction: 117.346","Index: 17<br>Observed: 144.000<br>Prediction: 201.040","Index: 364<br>Observed: 262.000<br>Prediction: 156.378","Index: 267<br>Observed: 115.000<br>Prediction: 161.888","Index: 289<br>Observed: 68.000<br>Prediction: 189.067","Index: 214<br>Observed: 65.000<br>Prediction: 97.853","Index: 78<br>Observed: 252.000<br>Prediction: 174.520","Index: 421<br>Observed: 212.000<br>Prediction: 195.393","Index: 47<br>Observed: 142.000<br>Prediction: 126.981","Index: 249<br>Observed: 215.000<br>Prediction: 233.686","Index: 311<br>Observed: 180.000<br>Prediction: 157.800","Index: 65<br>Observed: 163.000<br>Prediction: 170.295","Index: 174<br>Observed: 151.000<br>Prediction: 189.101","Index: 29<br>Observed: 283.000<br>Prediction: 199.307","Index: 431<br>Observed: 66.000<br>Prediction: 127.138","Index: 299<br>Observed: 83.000<br>Prediction: 105.701","Index: 164<br>Observed: 214.000<br>Prediction: 132.894","Index: 408<br>Observed: 189.000<br>Prediction: 189.644","Index: 102<br>Observed: 302.000<br>Prediction: 150.545","Index: 221<br>Observed: 93.000<br>Prediction: 132.210","Index: 146<br>Observed: 178.000<br>Prediction: 152.001","Index: 273<br>Observed: 241.000<br>Prediction: 174.383","Index: 62<br>Observed: 52.000<br>Prediction: 73.673","Index: 107<br>Observed: 144.000<br>Prediction: 130.560","Index: 101<br>Observed: 102.000<br>Prediction: 85.418","Index: 119<br>Observed: 200.000<br>Prediction: 141.394","Index: 399<br>Observed: 232.000<br>Prediction: 210.890","Index: 67<br>Observed: 97.000<br>Prediction: 104.584","Index: 318<br>Observed: 109.000<br>Prediction: 158.593","Index: 294<br>Observed: 55.000<br>Prediction: 88.114","Index: 391<br>Observed: 63.000<br>Prediction: 76.799","Index: 90<br>Observed: 98.000<br>Prediction: 78.534","Index: 347<br>Observed: 88.000<br>Prediction: 122.924","Index: 422<br>Observed: 233.000<br>Prediction: 220.280","Index: 377<br>Observed: 235.000<br>Prediction: 181.614","Index: 315<br>Observed: 97.000<br>Prediction: 99.860","Index: 251<br>Observed: 243.000<br>Prediction: 249.048","Index: 165<br>Observed: 59.000<br>Prediction: 77.767","Index: 6<br>Observed: 138.000<br>Prediction: 78.494","Index: 230<br>Observed: 220.000<br>Prediction: 216.377","Index: 186<br>Observed: 137.000<br>Prediction: 177.790","Index: 433<br>Observed: 72.000<br>Prediction: 80.890","Index: 353<br>Observed: 109.000<br>Prediction: 161.325","Index: 242<br>Observed: 71.000<br>Prediction: 109.843","Index: 171<br>Observed: 74.000<br>Prediction: 95.038","Index: 385<br>Observed: 219.000<br>Prediction: 100.664","Index: 206<br>Observed: 196.000<br>Prediction: 158.641","Index: 58<br>Observed: 170.000<br>Prediction: 113.318","Index: 331<br>Observed: 199.000<br>Prediction: 102.469","Index: 351<br>Observed: 71.000<br>Prediction: 82.999","Index: 208<br>Observed: 155.000<br>Prediction: 238.449","Index: 380<br>Observed: 52.000<br>Prediction: 185.664","Index: 257<br>Observed: 63.000<br>Prediction: 97.798","Index: 383<br>Observed: 88.000<br>Prediction: 97.915","Index: 18<br>Observed: 97.000<br>Prediction: 114.838","Index: 40<br>Observed: 100.000<br>Prediction: 150.936","Index: 277<br>Observed: 64.000<br>Prediction: 97.741","Index: 132<br>Observed: 107.000<br>Prediction: 101.905","Index: 213<br>Observed: 49.000<br>Prediction: 89.969","Index: 286<br>Observed: 60.000<br>Prediction: 97.066","Index: 256<br>Observed: 346.000<br>Prediction: 185.034"],"x":[78.0,152.0,200.0,59.0,311.0,178.0,332.0,132.0,156.0,135.0,220.0,233.0,91.0,51.0,195.0,109.0,217.0,94.0,89.0,111.0,129.0,181.0,168.0,97.0,115.0,202.0,84.0,147.0,253.0,144.0,262.0,115.0,68.0,65.0,252.0,212.0,142.0,215.0,180.0,163.0,151.0,283.0,66.0,83.0,214.0,189.0,302.0,93.0,178.0,241.0,52.0,144.0,102.0,200.0,232.0,97.0,109.0,55.0,63.0,98.0,88.0,233.0,235.0,97.0,243.0,59.0,138.0,220.0,137.0,72.0,109.0,71.0,74.0,219.0,196.0,170.0,199.0,71.0,155.0,52.0,63.0,88.0,97.0,100.0,64.0,107.0,49.0,60.0,346.0],"y":[148.75701155989637,109.36228795777015,163.26933753440466,84.15762293953004,168.57145902420268,242.90865934700957,241.44278628080198,101.90418596415792,147.51783114975441,94.27171957971566,171.74256482614382,178.56146481411415,99.80047482610127,83.48168697296465,251.90295874541076,209.26520843378367,195.81622491761348,97.681394361988,120.70635789700654,179.72428141004798,174.23038152417433,79.59110022817964,98.30506620833494,102.97496419509338,94.85991823867509,216.2546928253345,84.90790604640596,140.4231965708415,117.34610140003115,201.0398995646736,156.37771707713895,161.887919483881,189.0665533432155,97.85341610515965,174.5196707885435,195.3929227017482,126.98108047923245,233.68553705439072,157.79954100832632,170.2945742394613,189.10119556988073,199.3071981420013,127.13825996057255,105.70053574860498,132.89392322075517,189.6442583778313,150.54458413408094,132.20962090119258,152.00059250342548,174.3828422496959,73.67262467323731,130.55995670807738,85.41782382076391,141.39435192463282,210.89005040638256,104.58369964235473,158.5931821448473,88.11409874356015,76.79869368265545,78.53379855218193,122.92447593354615,220.28001193619082,181.6136984068371,99.85984197134253,249.04794207349212,77.76688952684518,78.49414370196848,216.37707804919418,177.79023764314334,80.89032540305358,161.3249508070531,109.8434115707831,95.03785150854111,100.6642173013077,158.64113841248064,113.3179037660703,102.46935648009247,82.99907751978006,238.4490932054722,185.66367963659147,97.79782014772232,97.91466953679812,114.8379698905441,150.93636354337758,97.74141643106336,101.90472899132469,89.96912337000543,97.06580476947727,185.0336371561207],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"","x":[49.0,51.0,52.0,52.0,55.0,59.0,59.0,60.0,63.0,63.0,64.0,65.0,66.0,68.0,71.0,71.0,72.0,74.0,78.0,83.0,84.0,88.0,88.0,89.0,91.0,93.0,94.0,97.0,97.0,97.0,97.0,98.0,100.0,102.0,107.0,109.0,109.0,109.0,111.0,115.0,115.0,129.0,132.0,135.0,137.0,138.0,142.0,144.0,144.0,147.0,151.0,152.0,155.0,156.0,163.0,168.0,170.0,178.0,178.0,180.0,181.0,189.0,195.0,196.0,199.0,200.0,200.0,202.0,212.0,214.0,215.0,217.0,219.0,220.0,220.0,232.0,233.0,233.0,235.0,241.0,243.0,252.0,253.0,262.0,283.0,302.0,311.0,332.0,346.0],"y":[49.0,51.0,52.0,52.0,55.0,59.0,59.0,60.0,63.0,63.0,64.0,65.0,66.0,68.0,71.0,71.0,72.0,74.0,78.0,83.0,84.0,88.0,88.0,89.0,91.0,93.0,94.0,97.0,97.0,97.0,97.0,98.0,100.0,102.0,107.0,109.0,109.0,109.0,111.0,115.0,115.0,129.0,132.0,135.0,137.0,138.0,142.0,144.0,144.0,147.0,151.0,152.0,155.0,156.0,163.0,168.0,170.0,178.0,178.0,180.0,181.0,189.0,195.0,196.0,199.0,200.0,200.0,202.0,212.0,214.0,215.0,217.0,219.0,220.0,220.0,232.0,233.0,233.0,235.0,241.0,243.0,252.0,253.0,262.0,283.0,302.0,311.0,332.0,346.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Predicted target vs Observed target"},"xaxis":{"title":{"text":"Observed target"}},"yaxis":{"title":{"text":"Predicted target"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Residuals</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="f2452b61-67a5-4c4b-8727-cfb6f7a3f4c2" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f2452b61-67a5-4c4b-8727-cfb6f7a3f4c2")) {                    Plotly.newPlot(                        "f2452b61-67a5-4c4b-8727-cfb6f7a3f4c2",                        [{"hoverinfo":"text","mode":"markers","name":"residuals (y-preds)","text":["Index: 246<br>Observed: 78.000<br>Prediction: 148.757<br>Residual: -70.757","Index: 425<br>Observed: 152.000<br>Prediction: 109.362<br>Residual: 42.638","Index: 293<br>Observed: 200.000<br>Prediction: 163.269<br>Residual: 36.731","Index: 31<br>Observed: 59.000<br>Prediction: 84.158<br>Residual: -25.158","Index: 359<br>Observed: 311.000<br>Prediction: 168.571<br>Residual: 142.429","Index: 437<br>Observed: 178.000<br>Prediction: 242.909<br>Residual: -64.909","Index: 290<br>Observed: 332.000<br>Prediction: 241.443<br>Residual: 90.557","Index: 439<br>Observed: 132.000<br>Prediction: 101.904<br>Residual: 30.096","Index: 284<br>Observed: 156.000<br>Prediction: 147.518<br>Residual: 8.482","Index: 4<br>Observed: 135.000<br>Prediction: 94.272<br>Residual: 40.728","Index: 440<br>Observed: 220.000<br>Prediction: 171.743<br>Residual: 48.257","Index: 285<br>Observed: 233.000<br>Prediction: 178.561<br>Residual: 54.439","Index: 192<br>Observed: 91.000<br>Prediction: 99.800<br>Residual: -8.800","Index: 389<br>Observed: 51.000<br>Prediction: 83.482<br>Residual: -32.482","Index: 159<br>Observed: 195.000<br>Prediction: 251.903<br>Residual: -56.903","Index: 310<br>Observed: 109.000<br>Prediction: 209.265<br>Residual: -100.265","Index: 375<br>Observed: 217.000<br>Prediction: 195.816<br>Residual: 21.184","Index: 429<br>Observed: 94.000<br>Prediction: 97.681<br>Residual: -3.681","Index: 258<br>Observed: 89.000<br>Prediction: 120.706<br>Residual: -31.706","Index: 424<br>Observed: 111.000<br>Prediction: 179.724<br>Residual: -68.724","Index: 197<br>Observed: 129.000<br>Prediction: 174.230<br>Residual: -45.230","Index: 283<br>Observed: 181.000<br>Prediction: 79.591<br>Residual: 101.409","Index: 373<br>Observed: 168.000<br>Prediction: 98.305<br>Residual: 69.695","Index: 5<br>Observed: 97.000<br>Prediction: 102.975<br>Residual: -5.975","Index: 128<br>Observed: 115.000<br>Prediction: 94.860<br>Residual: 20.140","Index: 207<br>Observed: 202.000<br>Prediction: 216.255<br>Residual: -14.255","Index: 292<br>Observed: 84.000<br>Prediction: 84.908<br>Residual: -0.908","Index: 314<br>Observed: 147.000<br>Prediction: 140.423<br>Residual: 6.577","Index: 304<br>Observed: 253.000<br>Prediction: 117.346<br>Residual: 135.654","Index: 17<br>Observed: 144.000<br>Prediction: 201.040<br>Residual: -57.040","Index: 364<br>Observed: 262.000<br>Prediction: 156.378<br>Residual: 105.622","Index: 267<br>Observed: 115.000<br>Prediction: 161.888<br>Residual: -46.888","Index: 289<br>Observed: 68.000<br>Prediction: 189.067<br>Residual: -121.067","Index: 214<br>Observed: 65.000<br>Prediction: 97.853<br>Residual: -32.853","Index: 78<br>Observed: 252.000<br>Prediction: 174.520<br>Residual: 77.480","Index: 421<br>Observed: 212.000<br>Prediction: 195.393<br>Residual: 16.607","Index: 47<br>Observed: 142.000<br>Prediction: 126.981<br>Residual: 15.019","Index: 249<br>Observed: 215.000<br>Prediction: 233.686<br>Residual: -18.686","Index: 311<br>Observed: 180.000<br>Prediction: 157.800<br>Residual: 22.200","Index: 65<br>Observed: 163.000<br>Prediction: 170.295<br>Residual: -7.295","Index: 174<br>Observed: 151.000<br>Prediction: 189.101<br>Residual: -38.101","Index: 29<br>Observed: 283.000<br>Prediction: 199.307<br>Residual: 83.693","Index: 431<br>Observed: 66.000<br>Prediction: 127.138<br>Residual: -61.138","Index: 299<br>Observed: 83.000<br>Prediction: 105.701<br>Residual: -22.701","Index: 164<br>Observed: 214.000<br>Prediction: 132.894<br>Residual: 81.106","Index: 408<br>Observed: 189.000<br>Prediction: 189.644<br>Residual: -0.644","Index: 102<br>Observed: 302.000<br>Prediction: 150.545<br>Residual: 151.455","Index: 221<br>Observed: 93.000<br>Prediction: 132.210<br>Residual: -39.210","Index: 146<br>Observed: 178.000<br>Prediction: 152.001<br>Residual: 25.999","Index: 273<br>Observed: 241.000<br>Prediction: 174.383<br>Residual: 66.617","Index: 62<br>Observed: 52.000<br>Prediction: 73.673<br>Residual: -21.673","Index: 107<br>Observed: 144.000<br>Prediction: 130.560<br>Residual: 13.440","Index: 101<br>Observed: 102.000<br>Prediction: 85.418<br>Residual: 16.582","Index: 119<br>Observed: 200.000<br>Prediction: 141.394<br>Residual: 58.606","Index: 399<br>Observed: 232.000<br>Prediction: 210.890<br>Residual: 21.110","Index: 67<br>Observed: 97.000<br>Prediction: 104.584<br>Residual: -7.584","Index: 318<br>Observed: 109.000<br>Prediction: 158.593<br>Residual: -49.593","Index: 294<br>Observed: 55.000<br>Prediction: 88.114<br>Residual: -33.114","Index: 391<br>Observed: 63.000<br>Prediction: 76.799<br>Residual: -13.799","Index: 90<br>Observed: 98.000<br>Prediction: 78.534<br>Residual: 19.466","Index: 347<br>Observed: 88.000<br>Prediction: 122.924<br>Residual: -34.924","Index: 422<br>Observed: 233.000<br>Prediction: 220.280<br>Residual: 12.720","Index: 377<br>Observed: 235.000<br>Prediction: 181.614<br>Residual: 53.386","Index: 315<br>Observed: 97.000<br>Prediction: 99.860<br>Residual: -2.860","Index: 251<br>Observed: 243.000<br>Prediction: 249.048<br>Residual: -6.048","Index: 165<br>Observed: 59.000<br>Prediction: 77.767<br>Residual: -18.767","Index: 6<br>Observed: 138.000<br>Prediction: 78.494<br>Residual: 59.506","Index: 230<br>Observed: 220.000<br>Prediction: 216.377<br>Residual: 3.623","Index: 186<br>Observed: 137.000<br>Prediction: 177.790<br>Residual: -40.790","Index: 433<br>Observed: 72.000<br>Prediction: 80.890<br>Residual: -8.890","Index: 353<br>Observed: 109.000<br>Prediction: 161.325<br>Residual: -52.325","Index: 242<br>Observed: 71.000<br>Prediction: 109.843<br>Residual: -38.843","Index: 171<br>Observed: 74.000<br>Prediction: 95.038<br>Residual: -21.038","Index: 385<br>Observed: 219.000<br>Prediction: 100.664<br>Residual: 118.336","Index: 206<br>Observed: 196.000<br>Prediction: 158.641<br>Residual: 37.359","Index: 58<br>Observed: 170.000<br>Prediction: 113.318<br>Residual: 56.682","Index: 331<br>Observed: 199.000<br>Prediction: 102.469<br>Residual: 96.531","Index: 351<br>Observed: 71.000<br>Prediction: 82.999<br>Residual: -11.999","Index: 208<br>Observed: 155.000<br>Prediction: 238.449<br>Residual: -83.449","Index: 380<br>Observed: 52.000<br>Prediction: 185.664<br>Residual: -133.664","Index: 257<br>Observed: 63.000<br>Prediction: 97.798<br>Residual: -34.798","Index: 383<br>Observed: 88.000<br>Prediction: 97.915<br>Residual: -9.915","Index: 18<br>Observed: 97.000<br>Prediction: 114.838<br>Residual: -17.838","Index: 40<br>Observed: 100.000<br>Prediction: 150.936<br>Residual: -50.936","Index: 277<br>Observed: 64.000<br>Prediction: 97.741<br>Residual: -33.741","Index: 132<br>Observed: 107.000<br>Prediction: 101.905<br>Residual: 5.095","Index: 213<br>Observed: 49.000<br>Prediction: 89.969<br>Residual: -40.969","Index: 286<br>Observed: 60.000<br>Prediction: 97.066<br>Residual: -37.066","Index: 256<br>Observed: 346.000<br>Prediction: 185.034<br>Residual: 160.966"],"x":[148.75701155989637,109.36228795777015,163.26933753440466,84.15762293953004,168.57145902420268,242.90865934700957,241.44278628080198,101.90418596415792,147.51783114975441,94.27171957971566,171.74256482614382,178.56146481411415,99.80047482610127,83.48168697296465,251.90295874541076,209.26520843378367,195.81622491761348,97.681394361988,120.70635789700654,179.72428141004798,174.23038152417433,79.59110022817964,98.30506620833494,102.97496419509338,94.85991823867509,216.2546928253345,84.90790604640596,140.4231965708415,117.34610140003115,201.0398995646736,156.37771707713895,161.887919483881,189.0665533432155,97.85341610515965,174.5196707885435,195.3929227017482,126.98108047923245,233.68553705439072,157.79954100832632,170.2945742394613,189.10119556988073,199.3071981420013,127.13825996057255,105.70053574860498,132.89392322075517,189.6442583778313,150.54458413408094,132.20962090119258,152.00059250342548,174.3828422496959,73.67262467323731,130.55995670807738,85.41782382076391,141.39435192463282,210.89005040638256,104.58369964235473,158.5931821448473,88.11409874356015,76.79869368265545,78.53379855218193,122.92447593354615,220.28001193619082,181.6136984068371,99.85984197134253,249.04794207349212,77.76688952684518,78.49414370196848,216.37707804919418,177.79023764314334,80.89032540305358,161.3249508070531,109.8434115707831,95.03785150854111,100.6642173013077,158.64113841248064,113.3179037660703,102.46935648009247,82.99907751978006,238.4490932054722,185.66367963659147,97.79782014772232,97.91466953679812,114.8379698905441,150.93636354337758,97.74141643106336,101.90472899132469,89.96912337000543,97.06580476947727,185.0336371561207],"y":[-70.75701155989637,42.63771204222985,36.730662465595344,-25.157622939530043,142.42854097579732,-64.90865934700957,90.55721371919802,30.095814035842082,8.482168850245586,40.728280420284335,48.25743517385618,54.438535185885854,-8.800474826101265,-32.48168697296465,-56.90295874541076,-100.26520843378367,21.183775082386518,-3.681394361987998,-31.70635789700654,-68.72428141004798,-45.230381524174334,101.40889977182036,69.69493379166506,-5.974964195093378,20.140081761324907,-14.254692825334502,-0.9079060464059552,6.5768034291585025,135.65389859996884,-57.03989956467359,105.62228292286105,-46.88791948388101,-121.0665533432155,-32.85341610515965,77.4803292114565,16.607077298251795,15.018919520767554,-18.68553705439072,22.200458991673685,-7.294574239461298,-38.10119556988073,83.69280185799869,-61.138259960572555,-22.700535748604977,81.10607677924483,-0.6442583778313065,151.45541586591906,-39.20962090119258,25.99940749657452,66.6171577503041,-21.67262467323731,13.44004329192262,16.582176179236086,58.605648075367185,21.109949593617443,-7.5836996423547305,-49.593182144847304,-33.11409874356015,-13.798693682655454,19.466201447818065,-34.92447593354615,12.719988063809183,53.3863015931629,-2.859841971342533,-6.047942073492123,-18.766889526845176,59.50585629803152,3.622921950805818,-40.79023764314334,-8.89032540305358,-52.32495080705311,-38.843411570783104,-21.03785150854111,118.3357826986923,37.35886158751936,56.6820962339297,96.53064351990753,-11.999077519780059,-83.4490932054722,-133.66367963659147,-34.79782014772232,-9.914669536798115,-17.8379698905441,-50.93636354337758,-33.74141643106336,5.0952710086753115,-40.969123370005434,-37.06580476947727,160.9663628438793],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"","x":[148.75701155989637,109.36228795777015,163.26933753440466,84.15762293953004,168.57145902420268,242.90865934700957,241.44278628080198,101.90418596415792,147.51783114975441,94.27171957971566,171.74256482614382,178.56146481411415,99.80047482610127,83.48168697296465,251.90295874541076,209.26520843378367,195.81622491761348,97.681394361988,120.70635789700654,179.72428141004798,174.23038152417433,79.59110022817964,98.30506620833494,102.97496419509338,94.85991823867509,216.2546928253345,84.90790604640596,140.4231965708415,117.34610140003115,201.0398995646736,156.37771707713895,161.887919483881,189.0665533432155,97.85341610515965,174.5196707885435,195.3929227017482,126.98108047923245,233.68553705439072,157.79954100832632,170.2945742394613,189.10119556988073,199.3071981420013,127.13825996057255,105.70053574860498,132.89392322075517,189.6442583778313,150.54458413408094,132.20962090119258,152.00059250342548,174.3828422496959,73.67262467323731,130.55995670807738,85.41782382076391,141.39435192463282,210.89005040638256,104.58369964235473,158.5931821448473,88.11409874356015,76.79869368265545,78.53379855218193,122.92447593354615,220.28001193619082,181.6136984068371,99.85984197134253,249.04794207349212,77.76688952684518,78.49414370196848,216.37707804919418,177.79023764314334,80.89032540305358,161.3249508070531,109.8434115707831,95.03785150854111,100.6642173013077,158.64113841248064,113.3179037660703,102.46935648009247,82.99907751978006,238.4490932054722,185.66367963659147,97.79782014772232,97.91466953679812,114.8379698905441,150.93636354337758,97.74141643106336,101.90472899132469,89.96912337000543,97.06580476947727,185.0336371561207],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Residuals vs predicted target"},"xaxis":{"title":{"text":""}},"yaxis":{"title":{"text":"residuals (y-preds)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Plot vs feature</h3><h6 class="card-subtitle">Are predictions and residuals correlated with features?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="e668f2c1-2d04-4da7-8677-337bc97fc8d8" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e668f2c1-2d04-4da7-8677-337bc97fc8d8")) {                    Plotly.newPlot(                        "e668f2c1-2d04-4da7-8677-337bc97fc8d8",                        [{"hoverinfo":"text","mode":"markers","name":"residuals (y-preds)","text":["Index: 246<br>Actual: 78.000<br>Prediction: 148.757<br>Residual: -70.757","Index: 425<br>Actual: 152.000<br>Prediction: 109.362<br>Residual: 42.638","Index: 293<br>Actual: 200.000<br>Prediction: 163.269<br>Residual: 36.731","Index: 31<br>Actual: 59.000<br>Prediction: 84.158<br>Residual: -25.158","Index: 359<br>Actual: 311.000<br>Prediction: 168.571<br>Residual: 142.429","Index: 437<br>Actual: 178.000<br>Prediction: 242.909<br>Residual: -64.909","Index: 290<br>Actual: 332.000<br>Prediction: 241.443<br>Residual: 90.557","Index: 439<br>Actual: 132.000<br>Prediction: 101.904<br>Residual: 30.096","Index: 284<br>Actual: 156.000<br>Prediction: 147.518<br>Residual: 8.482","Index: 4<br>Actual: 135.000<br>Prediction: 94.272<br>Residual: 40.728","Index: 440<br>Actual: 220.000<br>Prediction: 171.743<br>Residual: 48.257","Index: 285<br>Actual: 233.000<br>Prediction: 178.561<br>Residual: 54.439","Index: 192<br>Actual: 91.000<br>Prediction: 99.800<br>Residual: -8.800","Index: 389<br>Actual: 51.000<br>Prediction: 83.482<br>Residual: -32.482","Index: 159<br>Actual: 195.000<br>Prediction: 251.903<br>Residual: -56.903","Index: 310<br>Actual: 109.000<br>Prediction: 209.265<br>Residual: -100.265","Index: 375<br>Actual: 217.000<br>Prediction: 195.816<br>Residual: 21.184","Index: 429<br>Actual: 94.000<br>Prediction: 97.681<br>Residual: -3.681","Index: 258<br>Actual: 89.000<br>Prediction: 120.706<br>Residual: -31.706","Index: 424<br>Actual: 111.000<br>Prediction: 179.724<br>Residual: -68.724","Index: 197<br>Actual: 129.000<br>Prediction: 174.230<br>Residual: -45.230","Index: 283<br>Actual: 181.000<br>Prediction: 79.591<br>Residual: 101.409","Index: 373<br>Actual: 168.000<br>Prediction: 98.305<br>Residual: 69.695","Index: 5<br>Actual: 97.000<br>Prediction: 102.975<br>Residual: -5.975","Index: 128<br>Actual: 115.000<br>Prediction: 94.860<br>Residual: 20.140","Index: 207<br>Actual: 202.000<br>Prediction: 216.255<br>Residual: -14.255","Index: 292<br>Actual: 84.000<br>Prediction: 84.908<br>Residual: -0.908","Index: 314<br>Actual: 147.000<br>Prediction: 140.423<br>Residual: 6.577","Index: 304<br>Actual: 253.000<br>Prediction: 117.346<br>Residual: 135.654","Index: 17<br>Actual: 144.000<br>Prediction: 201.040<br>Residual: -57.040","Index: 364<br>Actual: 262.000<br>Prediction: 156.378<br>Residual: 105.622","Index: 267<br>Actual: 115.000<br>Prediction: 161.888<br>Residual: -46.888","Index: 289<br>Actual: 68.000<br>Prediction: 189.067<br>Residual: -121.067","Index: 214<br>Actual: 65.000<br>Prediction: 97.853<br>Residual: -32.853","Index: 78<br>Actual: 252.000<br>Prediction: 174.520<br>Residual: 77.480","Index: 421<br>Actual: 212.000<br>Prediction: 195.393<br>Residual: 16.607","Index: 47<br>Actual: 142.000<br>Prediction: 126.981<br>Residual: 15.019","Index: 249<br>Actual: 215.000<br>Prediction: 233.686<br>Residual: -18.686","Index: 311<br>Actual: 180.000<br>Prediction: 157.800<br>Residual: 22.200","Index: 65<br>Actual: 163.000<br>Prediction: 170.295<br>Residual: -7.295","Index: 174<br>Actual: 151.000<br>Prediction: 189.101<br>Residual: -38.101","Index: 29<br>Actual: 283.000<br>Prediction: 199.307<br>Residual: 83.693","Index: 431<br>Actual: 66.000<br>Prediction: 127.138<br>Residual: -61.138","Index: 299<br>Actual: 83.000<br>Prediction: 105.701<br>Residual: -22.701","Index: 164<br>Actual: 214.000<br>Prediction: 132.894<br>Residual: 81.106","Index: 408<br>Actual: 189.000<br>Prediction: 189.644<br>Residual: -0.644","Index: 102<br>Actual: 302.000<br>Prediction: 150.545<br>Residual: 151.455","Index: 221<br>Actual: 93.000<br>Prediction: 132.210<br>Residual: -39.210","Index: 146<br>Actual: 178.000<br>Prediction: 152.001<br>Residual: 25.999","Index: 273<br>Actual: 241.000<br>Prediction: 174.383<br>Residual: 66.617","Index: 62<br>Actual: 52.000<br>Prediction: 73.673<br>Residual: -21.673","Index: 107<br>Actual: 144.000<br>Prediction: 130.560<br>Residual: 13.440","Index: 101<br>Actual: 102.000<br>Prediction: 85.418<br>Residual: 16.582","Index: 119<br>Actual: 200.000<br>Prediction: 141.394<br>Residual: 58.606","Index: 399<br>Actual: 232.000<br>Prediction: 210.890<br>Residual: 21.110","Index: 67<br>Actual: 97.000<br>Prediction: 104.584<br>Residual: -7.584","Index: 318<br>Actual: 109.000<br>Prediction: 158.593<br>Residual: -49.593","Index: 294<br>Actual: 55.000<br>Prediction: 88.114<br>Residual: -33.114","Index: 391<br>Actual: 63.000<br>Prediction: 76.799<br>Residual: -13.799","Index: 90<br>Actual: 98.000<br>Prediction: 78.534<br>Residual: 19.466","Index: 347<br>Actual: 88.000<br>Prediction: 122.924<br>Residual: -34.924","Index: 422<br>Actual: 233.000<br>Prediction: 220.280<br>Residual: 12.720","Index: 377<br>Actual: 235.000<br>Prediction: 181.614<br>Residual: 53.386","Index: 315<br>Actual: 97.000<br>Prediction: 99.860<br>Residual: -2.860","Index: 251<br>Actual: 243.000<br>Prediction: 249.048<br>Residual: -6.048","Index: 165<br>Actual: 59.000<br>Prediction: 77.767<br>Residual: -18.767","Index: 6<br>Actual: 138.000<br>Prediction: 78.494<br>Residual: 59.506","Index: 230<br>Actual: 220.000<br>Prediction: 216.377<br>Residual: 3.623","Index: 186<br>Actual: 137.000<br>Prediction: 177.790<br>Residual: -40.790","Index: 433<br>Actual: 72.000<br>Prediction: 80.890<br>Residual: -8.890","Index: 353<br>Actual: 109.000<br>Prediction: 161.325<br>Residual: -52.325","Index: 242<br>Actual: 71.000<br>Prediction: 109.843<br>Residual: -38.843","Index: 171<br>Actual: 74.000<br>Prediction: 95.038<br>Residual: -21.038","Index: 385<br>Actual: 219.000<br>Prediction: 100.664<br>Residual: 118.336","Index: 206<br>Actual: 196.000<br>Prediction: 158.641<br>Residual: 37.359","Index: 58<br>Actual: 170.000<br>Prediction: 113.318<br>Residual: 56.682","Index: 331<br>Actual: 199.000<br>Prediction: 102.469<br>Residual: 96.531","Index: 351<br>Actual: 71.000<br>Prediction: 82.999<br>Residual: -11.999","Index: 208<br>Actual: 155.000<br>Prediction: 238.449<br>Residual: -83.449","Index: 380<br>Actual: 52.000<br>Prediction: 185.664<br>Residual: -133.664","Index: 257<br>Actual: 63.000<br>Prediction: 97.798<br>Residual: -34.798","Index: 383<br>Actual: 88.000<br>Prediction: 97.915<br>Residual: -9.915","Index: 18<br>Actual: 97.000<br>Prediction: 114.838<br>Residual: -17.838","Index: 40<br>Actual: 100.000<br>Prediction: 150.936<br>Residual: -50.936","Index: 277<br>Actual: 64.000<br>Prediction: 97.741<br>Residual: -33.741","Index: 132<br>Actual: 107.000<br>Prediction: 101.905<br>Residual: 5.095","Index: 213<br>Actual: 49.000<br>Prediction: 89.969<br>Residual: -40.969","Index: 286<br>Actual: 60.000<br>Prediction: 97.066<br>Residual: -37.066","Index: 256<br>Actual: 346.000<br>Prediction: 185.034<br>Residual: 160.966"],"x":[-0.0320734439089463,-0.040695940499992665,0.09295275666122646,-0.06548561819925106,0.005649978676881689,0.01966153563733209,0.07678557555301448,-0.015906262800734303,-0.022373135244019075,-0.03638469220446948,0.039062152967186486,-0.020217511096257485,-0.03099563183506548,0.0013387303813585058,0.04337340126270967,0.06492964274032566,-0.002972517914164677,-0.033151255982827074,-0.02452875939178067,0.011039039046285686,0.0034943545291200974,-0.05255187331268147,-0.010517202431330305,-0.040695940499992665,-0.06225218197760866,0.045529025410471304,-0.022373135244019075,0.04013996504106731,-0.03854031635223107,0.012116851120166501,-0.006205954135807083,-0.0008168937664030856,0.055229334075398484,-0.033151255982827074,-0.05794093368208547,0.016428099415689682,-0.07303030271641665,0.06061839444480248,0.04013996504106731,-0.02452875939178067,0.009961226972404908,-0.006205954135807083,-0.03099563183506548,-0.013750638652972673,-0.01913969902237667,-0.050396249164919873,0.028284032228378497,-0.03854031635223107,0.05954058237092167,-0.020217511096257485,-0.007283766209687899,0.04984027370599448,-0.04500718879551588,-0.047162812943277475,0.022894971858974496,-0.014828450726853487,0.006727790750762504,-0.03099563183506548,-0.06979686649477428,-0.02560657146566148,-0.029917819761184662,0.07786338762689529,0.009961226972404908,-0.020217511096257485,0.09834181703063047,-0.06656343027313188,-0.047162812943277475,0.07139651518361048,0.0422955891888289,-0.06009655782984706,-0.05578530953432388,-0.023450947317899894,-0.04608500086939666,-0.01913969902237667,0.026128408080616904,-0.06440780612537028,-0.02560657146566148,-0.040695940499992665,0.04013996504106731,0.026128408080616904,-0.05578530953432388,-0.028840007687303888,-0.010517202431330305,-0.008361578283568675,-0.05901874575596628,-0.0212953231701383,-0.07087467856865506,-0.05470749746044306,0.16085491731571683],"y":[-70.75701155989637,42.63771204222985,36.730662465595344,-25.157622939530043,142.42854097579732,-64.90865934700957,90.55721371919802,30.095814035842082,8.482168850245586,40.728280420284335,48.25743517385618,54.438535185885854,-8.800474826101265,-32.48168697296465,-56.90295874541076,-100.26520843378367,21.183775082386518,-3.681394361987998,-31.70635789700654,-68.72428141004798,-45.230381524174334,101.40889977182036,69.69493379166506,-5.974964195093378,20.140081761324907,-14.254692825334502,-0.9079060464059552,6.5768034291585025,135.65389859996884,-57.03989956467359,105.62228292286105,-46.88791948388101,-121.0665533432155,-32.85341610515965,77.4803292114565,16.607077298251795,15.018919520767554,-18.68553705439072,22.200458991673685,-7.294574239461298,-38.10119556988073,83.69280185799869,-61.138259960572555,-22.700535748604977,81.10607677924483,-0.6442583778313065,151.45541586591906,-39.20962090119258,25.99940749657452,66.6171577503041,-21.67262467323731,13.44004329192262,16.582176179236086,58.605648075367185,21.109949593617443,-7.5836996423547305,-49.593182144847304,-33.11409874356015,-13.798693682655454,19.466201447818065,-34.92447593354615,12.719988063809183,53.3863015931629,-2.859841971342533,-6.047942073492123,-18.766889526845176,59.50585629803152,3.622921950805818,-40.79023764314334,-8.89032540305358,-52.32495080705311,-38.843411570783104,-21.03785150854111,118.3357826986923,37.35886158751936,56.6820962339297,96.53064351990753,-11.999077519780059,-83.4490932054722,-133.66367963659147,-34.79782014772232,-9.914669536798115,-17.8379698905441,-50.93636354337758,-33.74141643106336,5.0952710086753115,-40.969123370005434,-37.06580476947727,160.9663628438793],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"bmi","x":[-0.0320734439089463,-0.040695940499992665,0.09295275666122646,-0.06548561819925106,0.005649978676881689,0.01966153563733209,0.07678557555301448,-0.015906262800734303,-0.022373135244019075,-0.03638469220446948,0.039062152967186486,-0.020217511096257485,-0.03099563183506548,0.0013387303813585058,0.04337340126270967,0.06492964274032566,-0.002972517914164677,-0.033151255982827074,-0.02452875939178067,0.011039039046285686,0.0034943545291200974,-0.05255187331268147,-0.010517202431330305,-0.040695940499992665,-0.06225218197760866,0.045529025410471304,-0.022373135244019075,0.04013996504106731,-0.03854031635223107,0.012116851120166501,-0.006205954135807083,-0.0008168937664030856,0.055229334075398484,-0.033151255982827074,-0.05794093368208547,0.016428099415689682,-0.07303030271641665,0.06061839444480248,0.04013996504106731,-0.02452875939178067,0.009961226972404908,-0.006205954135807083,-0.03099563183506548,-0.013750638652972673,-0.01913969902237667,-0.050396249164919873,0.028284032228378497,-0.03854031635223107,0.05954058237092167,-0.020217511096257485,-0.007283766209687899,0.04984027370599448,-0.04500718879551588,-0.047162812943277475,0.022894971858974496,-0.014828450726853487,0.006727790750762504,-0.03099563183506548,-0.06979686649477428,-0.02560657146566148,-0.029917819761184662,0.07786338762689529,0.009961226972404908,-0.020217511096257485,0.09834181703063047,-0.06656343027313188,-0.047162812943277475,0.07139651518361048,0.0422955891888289,-0.06009655782984706,-0.05578530953432388,-0.023450947317899894,-0.04608500086939666,-0.01913969902237667,0.026128408080616904,-0.06440780612537028,-0.02560657146566148,-0.040695940499992665,0.04013996504106731,0.026128408080616904,-0.05578530953432388,-0.028840007687303888,-0.010517202431330305,-0.008361578283568675,-0.05901874575596628,-0.0212953231701383,-0.07087467856865506,-0.05470749746044306,0.16085491731571683],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Residuals vs bmi"},"xaxis":{"title":{"text":"bmi value"}},"yaxis":{"title":{"text":"residuals (y-preds)"},"range":[-133.66367963659147,160.9663628438793]},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab2"
+     role="tabpanel" aria-labelledby="myTab2-tab"> <div><H1>Individual Predictions</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Select Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected index: <b>None</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+no index selected
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>no index selected</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="40e06db2-1180-4055-8dab-dce591aa3a69" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("40e06db2-1180-4055-8dab-dce591aa3a69")) {                    Plotly.newPlot(                        "40e06db2-1180-4055-8dab-dce591aa3a69",                        [{"line":{"color":"grey","width":4},"mode":"lines+markers","name":"average prediction <br>for different values of <br>bmi","x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[123.59,123.92,124.3,125.78,128.04,130.34,138.82,178.29,173.97,196.62],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[77.76688952684518,77.76688952684518,77.76688952684518,80.36557495864503,80.36557495864503,81.41743108113495,94.64428056332768,143.25843781603137,129.76913982397767,143.83611740604616],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[158.55954932378506,158.55954932378506,158.55954932378506,159.66754932378504,165.51685390808964,172.98007064418988,182.37968250567602,225.71129009744857,229.3509093407083,251.0762323634253],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[188.64446964543697,189.6442583778313,189.6442583778313,191.7837788456676,199.15441676330553,201.67470712263497,215.75273728800977,257.0644935493942,258.36376914429735,275.49536377881145],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[126.98108047923245,127.7377471458991,129.6737471458991,133.31433733960372,133.31433733960372,131.70899139365775,144.5433368473151,160.98827782565186,143.97160669747504,159.1423179694996],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[155.1227713556868,156.12256008808114,156.12256008808114,157.23056008808115,160.07535237550388,156.70364266854418,168.82517708873877,201.58861012675936,204.50033728902844,216.14992266072298],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[102.63776226886914,101.68376226886912,102.45564462181032,103.19004433932443,104.58369964235473,104.63061121966632,109.04276120820008,150.75280328594602,139.91398449695046,170.15897035213555],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[95.34906475634779,95.34906475634779,94.0185885658716,97.681394361988,99.0750496650183,95.72816615721902,97.95241062007518,144.02802994238758,130.93179712589904,159.64723619745837],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[107.11099878137357,106.15699878137355,108.09299878137355,109.8434115707831,109.8434115707831,110.23003958804492,124.9104722570364,164.82928630061144,153.55003245300978,165.5780927090397],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[164.4649465365523,165.46473526894667,165.46473526894667,166.57273526894667,172.40296642667784,183.5633604878111,189.53829521155293,182.1403695853713,181.56972040176402,189.0570215427255],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[185.55026346646184,187.83326346646183,187.83326346646183,187.83326346646183,191.48909330329167,195.71844814200134,202.63624098421664,245.48671324674365,241.57492823558619,268.5467283347349],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[161.18978112942168,162.18956986181604,162.18956986181604,162.18956986181604,168.298829320956,173.9554103501419,190.69343417936918,244.52565934700957,251.80931699962107,277.95584721585374],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[133.9692278385316,134.969016570926,134.969016570926,136.07701657092596,137.9789750013844,144.22565592063657,152.9108075699577,176.73847048051323,177.73480834181478,210.39855487304888],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[91.91330022259936,90.95930022259935,91.73118257554053,95.04995990374806,96.44361520677836,96.47152657077393,109.7534094799089,198.43353491286013,205.19557086764607,238.7656497630549],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[107.65162129110348,109.36228795777015,109.36228795777015,114.03439861931099,114.03439861931099,113.90589620753984,123.68097243042796,150.1099027569785,132.79825327382335,151.26649161843133],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[161.9112451205809,162.91103385297527,162.91103385297527,164.01903385297527,169.37968944738088,177.0055353133134,183.90617706312588,223.96683212765598,226.32729327394867,253.27375802908293],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[142.24554813438647,143.24533686678083,143.24533686678083,144.35333686678084,147.72389022646462,147.97803021004427,157.30143529154685,209.11569581442677,207.78722088434372,240.80446230323633],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[125.27330818053746,125.27330818053746,125.27330818053746,127.4128286483737,128.78250036554545,133.76295682212577,129.36749289269434,196.49751131040153,196.56136310753365,232.75039075901404],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[96.65146151725754,95.69746151725752,96.46934387019871,99.78812119840624,101.18177650143654,99.19699089573514,105.4503623999022,150.90971510161572,134.94856165020659,163.7896665530107],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[150.69769186827764,151.69748060067198,151.69748060067198,151.69748060067198,157.88517945375128,167.83063246254105,171.84431145320897,177.72494889429353,178.65814045829487,202.2422503672406],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[80.54510022817963,79.59110022817964,81.52710022817963,83.00703682711298,83.00703682711298,83.58064897135893,93.86606411011735,141.98474101609926,128.34406290708648,145.12056990091966],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[88.36913693454277,87.41513693454277,88.18701928748395,88.11409874356015,88.11409874356015,88.39378231637755,97.72735158504875,149.25881702159148,141.79468305703074,160.49133725780158],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[172.23667078854348,174.5196707885435,174.5196707885435,174.5196707885435,179.71202218714487,188.8197383538293,193.7337798355407,188.7766655658712,188.03044138547205,204.5132501091805],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[97.91781758379358,96.96381758379358,98.89981758379359,100.6642173013077,100.6642173013077,99.96467588716628,112.7350537931743,198.56603848815732,207.61215669402554,237.5332898033377],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[148.08928216111363,148.08928216111363,148.08928216111363,150.2288026289499,156.322110709758,159.7750433568145,162.8794596036427,168.46931205919546,161.08542989721522,191.97172187905392],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[154.19777605650822,155.1975647889026,155.1975647889026,155.1975647889026,161.38526364198188,165.1766405769664,170.8941526457255,166.77831085745046,165.92471754258796,185.0336371561207],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[169.9539805899276,170.95376932232196,170.95376932232196,173.09328979015822,176.2325265220254,176.87781688135482,181.67737167110943,223.07897685566627,226.8894420567957,246.14949086213903],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[141.076914523932,141.72770325632638,142.49958560926754,142.49958560926754,145.88286212441906,145.9635287910857,162.4964564401873,238.34650254613155,241.91772524010423,267.93919707771676],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[154.70681382095606,155.70660255335045,155.70660255335045,156.73812302118668,160.09275369244781,166.95860420342407,165.00891549333312,217.16387834683349,220.29312721787278,236.8751808539329],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[101.73805221931433,103.3428409517087,103.3428409517087,107.76102808621162,109.15468338924192,107.63319027183302,108.94240606790113,150.54458413408094,137.44835131759243,161.71921438096288],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[100.75295676257834,99.79895676257834,101.73495676257835,102.46935648009247,102.46935648009247,102.75644746031725,117.30753633163177,148.12175626737283,138.69649135043113,153.9573917016415],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[76.79869368265545,75.84469368265545,77.78069368265545,79.92382355889973,79.92382355889973,78.65261089832087,88.02281035080478,137.98747032600505,122.44550566728466,137.50848324935316],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[150.86156526101925,151.86135399341364,151.86135399341364,152.96935399341362,158.81865857771822,169.4609338342454,176.98325665809045,210.89005040638256,215.18583022980286,238.19748394512095],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[96.32768305431219,96.32768305431219,96.32768305431219,97.85341610515965,98.4769577718263,98.97428493743432,107.28396265230938,146.91504775380602,137.0155720257456,152.73297279247257],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[150.50861695077992,152.79161695077994,152.79161695077994,152.79161695077994,155.80910212864555,162.3705766428116,166.64888282832268,177.81119713952887,167.69209081080996,200.5750776174091],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[101.46096201148302,100.50696201148303,101.2788443644242,103.04324408193834,104.43689938496864,103.83458019304945,113.00382195213152,154.84537719561425,144.00655840661867,169.56132918895088],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[131.39194981585703,131.4377385482514,132.20962090119258,132.20962090119258,135.49103008922677,135.06545114185835,141.883257640605,152.48766217082863,148.7425799315407,173.8904597460035],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[123.52147539226516,124.52126412465952,124.52126412465952,125.62926412465951,128.31189829242413,136.98203977888684,142.9899639197818,158.64113841248064,157.31583813192807,189.4799791558168],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[141.7191021287754,143.04810212877538,147.1717944364677,147.1717944364677,147.51783114975441,150.18566160952454,160.19217732417914,206.53075633986046,207.70763180983985,254.92154886587923],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[80.89032540305358,80.89032540305358,79.55984921257738,81.14113454085755,81.14113454085755,80.35264878300559,84.4457844940103,136.3777618976048,123.80846390555111,147.56602014099232],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[152.82657224598833,153.8263609783827,153.8263609783827,154.93436097838267,157.1854219729437,162.1856989494571,169.36687755001185,207.14383983010595,213.0058169715339,226.49544381449775],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[82.97241389191706,82.97241389191706,82.97241389191706,84.90790604640596,84.90790604640596,86.24227024905102,96.63466947955935,147.0897986695569,135.93562056054415,150.12812755437733],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[170.62344492398861,171.62323365638298,171.62323365638298,172.73123365638298,178.56146481411415,190.3993238379415,193.23120000105445,206.2046138337325,208.410700707222,221.8471075548747],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[91.13505989856696,90.18105989856696,90.95294225150812,95.30171957971567,96.69537488274597,95.78161958007487,106.57955162925899,161.82870097769842,157.2132693287473,186.20574288056906],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[124.21616793536614,124.21616793536614,126.40386024305845,127.13825996057255,127.76180162723922,128.24695718279474,134.89827525158117,163.89142198132825,162.47875116754588,191.52493732410036],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[168.18678550706696,169.18657423946132,169.18657423946132,170.2945742394613,175.35647763799517,183.53437049513803,194.20395078801664,231.48251973712203,243.21643026329676,261.7100897498898],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[120.23583809470901,119.28183809470902,117.34610140003115,118.38291053783513,119.77656584086543,117.52961028530986,127.67325149969034,200.66872833271304,209.57109762083235,243.29513929815172],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[93.89271986924041,92.9387198692404,94.8747198692404,97.16197672961165,97.16197672961165,98.30506620833494,114.45971342014586,162.2029612023458,147.1034449563238,161.7804067996553],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[98.18004443221622,97.13104443221623,96.5724505946812,98.09818364552866,98.09818364552866,96.69782873830755,108.43564728289901,144.01482312877846,130.55995670807738,147.53925965850027],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[87.54940637282563,86.59540637282564,88.53140637282564,90.05713942367309,90.05713942367309,91.1812674409349,103.65568259425493,185.66367963659147,196.98010171451358,213.21853719179373],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[-0.07303030271641665,-0.05626433712271535,-0.040695940499992665,-0.03099563183506548,-0.022253378346921215,-0.010876473122623888,0.004931437294294471,0.026128408080616904,0.05103784267697311,0.16085491731571683],"y":[162.23819082904515,163.23797956143952,163.23797956143952,164.34597956143952,170.22697994993996,176.32320107200508,181.15945107213855,174.88019676837177,176.02926980698675,188.89272707706937],"type":"scatter"}],                        {"plot_bgcolor":"#fff","title":{"text":"pdp plot for bmi"},"xaxis":{"title":{"text":"bmi"}},"yaxis":{"title":{"text":"Predicted target"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"showlegend":false,"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>no index selected</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab3"
+     role="tabpanel" aria-labelledby="myTab3-tab"> <div><H1>Feature Dependence</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Shap Summary</h3><h6 class="card-subtitle">Ordering features by shap value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="8a849104-1b8e-4a4f-972a-0f139bd2a556" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8a849104-1b8e-4a4f-972a-0f139bd2a556")) {                    Plotly.newPlot(                        "8a849104-1b8e-4a4f-972a-0f139bd2a556",                        [{"hoverinfo":"text","orientation":"h","x":[1.0719906760057445,1.3236260817011998,1.3240175710949764,1.9010029275054703,2.7945396179567967,3.240682450860324,3.5510693392923813,8.286648452870244,24.256446687985818,28.175278565620527],"y":["10. s2","9. sex","8. s1","7. s4","6. age","5. s6","4. s3","3. bp","2. s5","1. bmi"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted target<br>(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":400,"margin":{"b":40,"l":21,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Shap Dependence</h3><h6 class="card-subtitle">Relationship between feature value and SHAP value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="8ead6512-b429-421f-9bd3-43dee00e259d" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8ead6512-b429-421f-9bd3-43dee00e259d")) {                    Plotly.newPlot(                        "8ead6512-b429-421f-9bd3-43dee00e259d",                        [{"hoverinfo":"text","marker":{"color":[0.04506654937395887,-0.020292321339471356,-0.05453964034510003,-0.0371288393600719,0.014820979914103668,0.031192602201596156,0.02993464904142137,-0.04688253415273158,0.002861309289833047,-0.03198763948805312,0.04452872881997113,0.05987940361514779,-0.02952642678336326,-0.041176166918895155,0.04234098419358016,-0.018113692315690322,0.02802037249332928,-0.025953110560258,-0.0371288393600719,0.024055085357995654,0.013316905483459898,-0.0683315470939731,-0.042570854118219384,-0.041176166918895155,-0.030747917533098208,0.04613307487932449,-0.06291687914365544,-0.011896851335695978,-0.022516528376302174,0.02736404910541198,0.014820979914103668,0.02337141516224845,0.06123762840403217,-0.03980882652740082,0.04289703595278786,0.04977020032069951,-0.018113692315690322,0.07020738137223513,0.012551194864223063,0.04234098419358016,0.017036071348324546,0.059423623484649676,-0.014959693812643405,-0.025953110560258,0.017765319557121535,0.05803805188793539,-0.005142189801713891,0.0011475759991601464,0.014820979914103668,0.10635074572073594,-0.08237869071592514,-0.05296264109357657,-0.030747917533098208,0.02736404910541198,0.03954249419232167,-0.011896851335695978,0.009433658771615987,-0.07409260794346935,-0.08913335224990723,-0.07213275338232743,0.0037090603325595967,0.04067282891595704,0.009433658771615987,-0.010903250651210127,0.08449153066204618,-0.05615310200706333,-0.06291687914365544,0.050280674066857343,0.04719048478208009,-0.05140387304727299,0.1323757911721786,-0.07813993550229265,-0.05140387304727299,-0.025953110560258,0.009433658771615987,-0.0006117353045626216,-0.041176166918895155,-0.05780302607946657,-0.0014959487577289358,-0.05140387304727299,-0.005142189801713891,-0.018113692315690322,-0.018113692315690322,0.012551194864223063,-0.021395309255276825,-0.012908683225401873,-0.022516528376302174,-0.019198449026275908,0.02802037249332928],"colorbar":{"title":{"text":"s5"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=246<br>bmi=-0.0320734439089463<br>s5=0.04506654937395887<br>SHAP=-25.005","None=425<br>bmi=-0.040695940499992665<br>s5=-0.020292321339471356<br>SHAP=-23.838","None=293<br>bmi=0.09295275666122646<br>s5=-0.05453964034510003<br>SHAP=55.073","None=31<br>bmi=-0.06548561819925106<br>s5=-0.0371288393600719<br>SHAP=-26.731","None=359<br>bmi=0.005649978676881689<br>s5=0.014820979914103668<br>SHAP=-13.034","None=437<br>bmi=0.01966153563733209<br>s5=0.031192602201596156<br>SHAP=35.502","None=290<br>bmi=0.07678557555301448<br>s5=0.02993464904142137<br>SHAP=49.799","None=439<br>bmi=-0.015906262800734303<br>s5=-0.04688253415273158<br>SHAP=-25.552","None=284<br>bmi=-0.022373135244019075<br>s5=0.002861309289833047<br>SHAP=-29.897","None=4<br>bmi=-0.03638469220446948<br>s5=-0.03198763948805312<br>SHAP=-28.477","None=440<br>bmi=0.039062152967186486<br>s5=0.04452872881997113<br>SHAP=19.753","None=285<br>bmi=-0.020217511096257485<br>s5=0.05987940361514779<br>SHAP=-23.379","None=192<br>bmi=-0.03099563183506548<br>s5=-0.02952642678336326<br>SHAP=-25.677","None=389<br>bmi=0.0013387303813585058<br>s5=-0.041176166918895155<br>SHAP=-17.415","None=159<br>bmi=0.04337340126270967<br>s5=0.04234098419358016<br>SHAP=37.088","None=310<br>bmi=0.06492964274032566<br>s5=-0.018113692315690322<br>SHAP=57.817","None=375<br>bmi=-0.002972517914164677<br>s5=0.02802037249332928<br>SHAP=-21.976","None=429<br>bmi=-0.033151255982827074<br>s5=-0.025953110560258<br>SHAP=-23.350","None=258<br>bmi=-0.02452875939178067<br>s5=-0.0371288393600719<br>SHAP=-24.704","None=424<br>bmi=0.011039039046285686<br>s5=0.024055085357995654<br>SHAP=19.865","None=197<br>bmi=0.0034943545291200974<br>s5=0.013316905483459898<br>SHAP=-18.833","None=283<br>bmi=-0.05255187331268147<br>s5=-0.0683315470939731<br>SHAP=-28.573","None=373<br>bmi=-0.010517202431330305<br>s5=-0.042570854118219384<br>SHAP=-22.469","None=5<br>bmi=-0.040695940499992665<br>s5=-0.041176166918895155<br>SHAP=-25.519","None=128<br>bmi=-0.06225218197760866<br>s5=-0.030747917533098208<br>SHAP=-25.638","None=207<br>bmi=0.045529025410471304<br>s5=0.04613307487932449<br>SHAP=35.324","None=292<br>bmi=-0.022373135244019075<br>s5=-0.06291687914365544<br>SHAP=-25.442","None=314<br>bmi=0.04013996504106731<br>s5=-0.011896851335695978<br>SHAP=32.693","None=304<br>bmi=-0.03854031635223107<br>s5=-0.022516528376302174<br>SHAP=-32.621","None=17<br>bmi=0.012116851120166501<br>s5=0.02736404910541198<br>SHAP=16.596","None=364<br>bmi=-0.006205954135807083<br>s5=0.014820979914103668<br>SHAP=-22.084","None=267<br>bmi=-0.0008168937664030856<br>s5=0.02337141516224845<br>SHAP=-12.291","None=289<br>bmi=0.055229334075398484<br>s5=0.06123762840403217<br>SHAP=24.252","None=214<br>bmi=-0.033151255982827074<br>s5=-0.03980882652740082<br>SHAP=-24.483","None=78<br>bmi=-0.05794093368208547<br>s5=0.04289703595278786<br>SHAP=-25.746","None=421<br>bmi=0.016428099415689682<br>s5=0.04977020032069951<br>SHAP=19.444","None=47<br>bmi=-0.07303030271641665<br>s5=-0.018113692315690322<br>SHAP=-23.970","None=249<br>bmi=0.06061839444480248<br>s5=0.07020738137223513<br>SHAP=41.493","None=311<br>bmi=0.04013996504106731<br>s5=0.012551194864223063<br>SHAP=17.333","None=65<br>bmi=-0.02452875939178067<br>s5=0.04234098419358016<br>SHAP=-34.985","None=174<br>bmi=0.009961226972404908<br>s5=0.017036071348324546<br>SHAP=23.543","None=29<br>bmi=-0.006205954135807083<br>s5=0.059423623484649676<br>SHAP=-24.671","None=431<br>bmi=-0.03099563183506548<br>s5=-0.014959693812643405<br>SHAP=-24.357","None=299<br>bmi=-0.013750638652972673<br>s5=-0.025953110560258<br>SHAP=-21.826","None=164<br>bmi=-0.01913969902237667<br>s5=0.017765319557121535<br>SHAP=-28.085","None=408<br>bmi=-0.050396249164919873<br>s5=0.05803805188793539<br>SHAP=-36.945","None=102<br>bmi=0.028284032228378497<br>s5=-0.005142189801713891<br>SHAP=35.356","None=221<br>bmi=-0.03854031635223107<br>s5=0.0011475759991601464<br>SHAP=-24.338","None=146<br>bmi=0.05954058237092167<br>s5=0.014820979914103668<br>SHAP=24.459","None=273<br>bmi=-0.020217511096257485<br>s5=0.10635074572073594<br>SHAP=-27.714","None=62<br>bmi=-0.007283766209687899<br>s5=-0.08237869071592514<br>SHAP=-23.442","None=107<br>bmi=0.04984027370599448<br>s5=-0.05296264109357657<br>SHAP=28.752","None=101<br>bmi=-0.04500718879551588<br>s5=-0.030747917533098208<br>SHAP=-35.110","None=119<br>bmi=-0.047162812943277475<br>s5=0.02736404910541198<br>SHAP=-30.502","None=399<br>bmi=0.022894971858974496<br>s5=0.03954249419232167<br>SHAP=32.119","None=67<br>bmi=-0.014828450726853487<br>s5=-0.011896851335695978<br>SHAP=-22.896","None=318<br>bmi=0.006727790750762504<br>s5=0.009433658771615987<br>SHAP=4.978","None=294<br>bmi=-0.03099563183506548<br>s5=-0.07409260794346935<br>SHAP=-27.457","None=391<br>bmi=-0.06979686649477428<br>s5=-0.08913335224990723<br>SHAP=-27.179","None=90<br>bmi=-0.02560657146566148<br>s5=-0.07213275338232743<br>SHAP=-27.095","None=347<br>bmi=-0.029917819761184662<br>s5=0.0037090603325595967<br>SHAP=-25.758","None=422<br>bmi=0.07786338762689529<br>s5=0.04067282891595704<br>SHAP=48.667","None=377<br>bmi=0.009961226972404908<br>s5=0.009433658771615987<br>SHAP=26.861","None=315<br>bmi=-0.020217511096257485<br>s5=-0.010903250651210127<br>SHAP=-21.728","None=251<br>bmi=0.09834181703063047<br>s5=0.08449153066204618<br>SHAP=47.626","None=165<br>bmi=-0.06656343027313188<br>s5=-0.05615310200706333<br>SHAP=-28.746","None=6<br>bmi=-0.047162812943277475<br>s5=-0.06291687914365544<br>SHAP=-28.141","None=230<br>bmi=0.07139651518361048<br>s5=0.050280674066857343<br>SHAP=39.180","None=186<br>bmi=0.0422955891888289<br>s5=0.04719048478208009<br>SHAP=18.881","None=433<br>bmi=-0.06009655782984706<br>s5=-0.05140387304727299<br>SHAP=-26.908","None=353<br>bmi=-0.05578530953432388<br>s5=0.1323757911721786<br>SHAP=-28.815","None=242<br>bmi=-0.023450947317899894<br>s5=-0.07813993550229265<br>SHAP=-23.400","None=171<br>bmi=-0.04608500086939666<br>s5=-0.05140387304727299<br>SHAP=-24.906","None=385<br>bmi=-0.01913969902237667<br>s5=-0.025953110560258<br>SHAP=-31.427","None=206<br>bmi=0.026128408080616904<br>s5=0.009433658771615987<br>SHAP=27.686","None=58<br>bmi=-0.06440780612537028<br>s5=-0.0006117353045626216<br>SHAP=-36.172","None=331<br>bmi=-0.02560657146566148<br>s5=-0.041176166918895155<br>SHAP=-23.745","None=351<br>bmi=-0.040695940499992665<br>s5=-0.05780302607946657<br>SHAP=-27.807","None=208<br>bmi=0.04013996504106731<br>s5=-0.0014959487577289358<br>SHAP=47.201","None=380<br>bmi=0.026128408080616904<br>s5=-0.05140387304727299<br>SHAP=51.420","None=257<br>bmi=-0.05578530953432388<br>s5=-0.005142189801713891<br>SHAP=-33.636","None=383<br>bmi=-0.028840007687303888<br>s5=-0.018113692315690322<br>SHAP=-24.980","None=18<br>bmi=-0.010517202431330305<br>s5=-0.018113692315690322<br>SHAP=-20.972","None=40<br>bmi=-0.008361578283568675<br>s5=0.012551194864223063<br>SHAP=-24.815","None=277<br>bmi=-0.05901874575596628<br>s5=-0.021395309255276825<br>SHAP=-26.436","None=132<br>bmi=-0.0212953231701383<br>s5=-0.012908683225401873<br>SHAP=-24.112","None=213<br>bmi=-0.07087467856865506<br>s5=-0.022516528376302174<br>SHAP=-26.951","None=286<br>bmi=-0.05470749746044306<br>s5=-0.019198449026275908<br>SHAP=-25.597","None=256<br>bmi=0.16085491731571683<br>s5=0.02802037249332928<br>SHAP=40.479"],"x":[-0.0320734439089463,-0.040695940499992665,0.09295275666122646,-0.06548561819925106,0.005649978676881689,0.01966153563733209,0.07678557555301448,-0.015906262800734303,-0.022373135244019075,-0.03638469220446948,0.039062152967186486,-0.020217511096257485,-0.03099563183506548,0.0013387303813585058,0.04337340126270967,0.06492964274032566,-0.002972517914164677,-0.033151255982827074,-0.02452875939178067,0.011039039046285686,0.0034943545291200974,-0.05255187331268147,-0.010517202431330305,-0.040695940499992665,-0.06225218197760866,0.045529025410471304,-0.022373135244019075,0.04013996504106731,-0.03854031635223107,0.012116851120166501,-0.006205954135807083,-0.0008168937664030856,0.055229334075398484,-0.033151255982827074,-0.05794093368208547,0.016428099415689682,-0.07303030271641665,0.06061839444480248,0.04013996504106731,-0.02452875939178067,0.009961226972404908,-0.006205954135807083,-0.03099563183506548,-0.013750638652972673,-0.01913969902237667,-0.050396249164919873,0.028284032228378497,-0.03854031635223107,0.05954058237092167,-0.020217511096257485,-0.007283766209687899,0.04984027370599448,-0.04500718879551588,-0.047162812943277475,0.022894971858974496,-0.014828450726853487,0.006727790750762504,-0.03099563183506548,-0.06979686649477428,-0.02560657146566148,-0.029917819761184662,0.07786338762689529,0.009961226972404908,-0.020217511096257485,0.09834181703063047,-0.06656343027313188,-0.047162812943277475,0.07139651518361048,0.0422955891888289,-0.06009655782984706,-0.05578530953432388,-0.023450947317899894,-0.04608500086939666,-0.01913969902237667,0.026128408080616904,-0.06440780612537028,-0.02560657146566148,-0.040695940499992665,0.04013996504106731,0.026128408080616904,-0.05578530953432388,-0.028840007687303888,-0.010517202431330305,-0.008361578283568675,-0.05901874575596628,-0.0212953231701383,-0.07087467856865506,-0.05470749746044306,0.16085491731571683],"y":[-25.00547587212529,-23.83759523830966,55.073334043601676,-26.730589799064116,-13.03417138201948,35.50224109496192,49.79896136470061,-25.55236376122264,-29.897410461556408,-28.476687328150017,19.752652812311638,-23.37917154828386,-25.67687486726497,-17.41507847127981,37.088360485077274,57.81717526528368,-21.97550866093177,-23.350173834532693,-24.704058752618426,19.865270178525904,-18.832692185610103,-28.573160499818343,-22.46916174094892,-25.51922574472809,-25.63782110507579,35.32414364910215,-25.44199806405275,32.69266438146905,-32.62057935373207,16.596267320669785,-22.084232236887303,-12.291140350580685,24.251835935622292,-24.48281652436833,-25.745855786474834,19.443919771378358,-23.97048991260353,41.49347447089214,17.33326580651448,-34.98460186038155,23.543274334722632,-24.671310256616266,-24.356968176543795,-21.825652562390072,-28.08467521837638,-36.94481561385029,35.35550308881304,-24.33818208964979,24.459327476466747,-27.714473545636864,-23.44200321128488,28.751619719228437,-35.11008914187759,-30.501781051716346,32.1186302052053,-22.895620774723778,4.977940132777857,-27.45731095175208,-27.179051404526817,-27.09474503274024,-25.758238884924687,48.66694491833239,26.86112337636178,-21.728428598381544,47.62580819009191,-28.745931778793434,-28.141410487252635,39.1799062070693,18.88098479895327,-26.907962908971392,-28.814911462364304,-23.39976657726163,-24.906104128907046,-31.427399648951603,27.686347961598386,-36.17174717534802,-23.744922282000417,-27.807493198988617,47.20124860449871,51.420199930348836,-33.63561481298019,-24.979932571923808,-20.972292386315225,-24.81516068637462,-26.43624211309977,-24.111747633768335,-26.950588598481655,-25.59724077655609,40.478615729695875],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Dependence plot for bmi"},"xaxis":{"title":{"text":"bmi"}},"yaxis":{"title":{"text":"SHAP value"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab4"
+     role="tabpanel" aria-labelledby="myTab4-tab"> <div><H1>Feature Interactions</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Interactions Summary</h3><h6 class="card-subtitle">Ordering features by shap interaction value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="c282e2d6-5c97-4dee-a134-30aaa825834c" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c282e2d6-5c97-4dee-a134-30aaa825834c")) {                    Plotly.newPlot(                        "c282e2d6-5c97-4dee-a134-30aaa825834c",                        [{"hoverinfo":"text","orientation":"h","x":[0.3306512863147473,0.4190223973070153,0.43805446585614527,0.5526994828436319,0.6827601015954717,0.6952426748923437,1.1178936797566335,3.7581570250978524,3.991468523808299,34.823959140111775],"y":["10. sex","9. s2","8. s1","7. s4","6. age","5. s3","4. s6","3. s5","2. bp","1. bmi"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average interaction shap values for bmi"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":400,"margin":{"b":40,"l":21,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Interaction Dependence</h3><h6 class="card-subtitle">Relation between feature value and shap interaction value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="f18284e9-2748-4d25-94eb-7766c2f4f42f" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f18284e9-2748-4d25-94eb-7766c2f4f42f")) {                    Plotly.newPlot(                        "f18284e9-2748-4d25-94eb-7766c2f4f42f",                        [{"hoverinfo":"text","marker":{"color":[-0.0320734439089463,-0.040695940499992665,0.09295275666122646,-0.06548561819925106,0.005649978676881689,0.01966153563733209,0.07678557555301448,-0.015906262800734303,-0.022373135244019075,-0.03638469220446948,0.039062152967186486,-0.020217511096257485,-0.03099563183506548,0.0013387303813585058,0.04337340126270967,0.06492964274032566,-0.002972517914164677,-0.033151255982827074,-0.02452875939178067,0.011039039046285686,0.0034943545291200974,-0.05255187331268147,-0.010517202431330305,-0.040695940499992665,-0.06225218197760866,0.045529025410471304,-0.022373135244019075,0.04013996504106731,-0.03854031635223107,0.012116851120166501,-0.006205954135807083,-0.0008168937664030856,0.055229334075398484,-0.033151255982827074,-0.05794093368208547,0.016428099415689682,-0.07303030271641665,0.06061839444480248,0.04013996504106731,-0.02452875939178067,0.009961226972404908,-0.006205954135807083,-0.03099563183506548,-0.013750638652972673,-0.01913969902237667,-0.050396249164919873,0.028284032228378497,-0.03854031635223107,0.05954058237092167,-0.020217511096257485,-0.007283766209687899,0.04984027370599448,-0.04500718879551588,-0.047162812943277475,0.022894971858974496,-0.014828450726853487,0.006727790750762504,-0.03099563183506548,-0.06979686649477428,-0.02560657146566148,-0.029917819761184662,0.07786338762689529,0.009961226972404908,-0.020217511096257485,0.09834181703063047,-0.06656343027313188,-0.047162812943277475,0.07139651518361048,0.0422955891888289,-0.06009655782984706,-0.05578530953432388,-0.023450947317899894,-0.04608500086939666,-0.01913969902237667,0.026128408080616904,-0.06440780612537028,-0.02560657146566148,-0.040695940499992665,0.04013996504106731,0.026128408080616904,-0.05578530953432388,-0.028840007687303888,-0.010517202431330305,-0.008361578283568675,-0.05901874575596628,-0.0212953231701383,-0.07087467856865506,-0.05470749746044306,0.16085491731571683],"colorbar":{"title":{"text":"bmi"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=246<br>s5=0.04506654937395887<br>bmi=-0.0320734439089463<br>SHAP=0.986","None=425<br>s5=-0.020292321339471356<br>bmi=-0.040695940499992665<br>SHAP=2.750","None=293<br>s5=-0.05453964034510003<br>bmi=0.09295275666122646<br>SHAP=1.583","None=31<br>s5=-0.0371288393600719<br>bmi=-0.06548561819925106<br>SHAP=3.313","None=359<br>s5=0.014820979914103668<br>bmi=0.005649978676881689<br>SHAP=-1.043","None=437<br>s5=0.031192602201596156<br>bmi=0.01966153563733209<br>SHAP=-10.353","None=290<br>s5=0.02993464904142137<br>bmi=0.07678557555301448<br>SHAP=-10.242","None=439<br>s5=-0.04688253415273158<br>bmi=-0.015906262800734303<br>SHAP=1.736","None=284<br>s5=0.002861309289833047<br>bmi=-0.022373135244019075<br>SHAP=2.450","None=4<br>s5=-0.03198763948805312<br>bmi=-0.03638469220446948<br>SHAP=4.041","None=440<br>s5=0.04452872881997113<br>bmi=0.039062152967186486<br>SHAP=-10.017","None=285<br>s5=0.05987940361514779<br>bmi=-0.020217511096257485<br>SHAP=1.713","None=192<br>s5=-0.02952642678336326<br>bmi=-0.03099563183506548<br>SHAP=3.981","None=389<br>s5=-0.041176166918895155<br>bmi=0.0013387303813585058<br>SHAP=0.833","None=159<br>s5=0.04234098419358016<br>bmi=0.04337340126270967<br>SHAP=-12.321","None=310<br>s5=-0.018113692315690322<br>bmi=0.06492964274032566<br>SHAP=2.372","None=375<br>s5=0.02802037249332928<br>bmi=-0.002972517914164677<br>SHAP=6.616","None=429<br>s5=-0.025953110560258<br>bmi=-0.033151255982827074<br>SHAP=2.906","None=258<br>s5=-0.0371288393600719<br>bmi=-0.02452875939178067<br>SHAP=3.686","None=424<br>s5=0.024055085357995654<br>bmi=0.011039039046285686<br>SHAP=-11.666","None=197<br>s5=0.013316905483459898<br>bmi=0.0034943545291200974<br>SHAP=0.152","None=283<br>s5=-0.0683315470939731<br>bmi=-0.05255187331268147<br>SHAP=1.540","None=373<br>s5=-0.042570854118219384<br>bmi=-0.010517202431330305<br>SHAP=-0.120","None=5<br>s5=-0.041176166918895155<br>bmi=-0.040695940499992665<br>SHAP=1.435","None=128<br>s5=-0.030747917533098208<br>bmi=-0.06225218197760866<br>SHAP=3.352","None=207<br>s5=0.04613307487932449<br>bmi=0.045529025410471304<br>SHAP=-11.044","None=292<br>s5=-0.06291687914365544<br>bmi=-0.022373135244019075<br>SHAP=0.588","None=314<br>s5=-0.011896851335695978<br>bmi=0.04013996504106731<br>SHAP=-0.354","None=304<br>s5=-0.022516528376302174<br>bmi=-0.03854031635223107<br>SHAP=1.326","None=17<br>s5=0.02736404910541198<br>bmi=0.012116851120166501<br>SHAP=-9.951","None=364<br>s5=0.014820979914103668<br>bmi=-0.006205954135807083<br>SHAP=3.145","None=267<br>s5=0.02337141516224845<br>bmi=-0.0008168937664030856<br>SHAP=4.921","None=289<br>s5=0.06123762840403217<br>bmi=0.055229334075398484<br>SHAP=-4.606","None=214<br>s5=-0.03980882652740082<br>bmi=-0.033151255982827074<br>SHAP=2.278","None=78<br>s5=0.04289703595278786<br>bmi=-0.05794093368208547<br>SHAP=2.160","None=421<br>s5=0.04977020032069951<br>bmi=0.016428099415689682<br>SHAP=-8.202","None=47<br>s5=-0.018113692315690322<br>bmi=-0.07303030271641665<br>SHAP=3.338","None=249<br>s5=0.07020738137223513<br>bmi=0.06061839444480248<br>SHAP=-8.409","None=311<br>s5=0.012551194864223063<br>bmi=0.04013996504106731<br>SHAP=-7.404","None=65<br>s5=0.04234098419358016<br>bmi=-0.02452875939178067<br>SHAP=0.668","None=174<br>s5=0.017036071348324546<br>bmi=0.009961226972404908<br>SHAP=-5.485","None=29<br>s5=0.059423623484649676<br>bmi=-0.006205954135807083<br>SHAP=4.679","None=431<br>s5=-0.014959693812643405<br>bmi=-0.03099563183506548<br>SHAP=4.945","None=299<br>s5=-0.025953110560258<br>bmi=-0.013750638652972673<br>SHAP=1.522","None=164<br>s5=0.017765319557121535<br>bmi=-0.01913969902237667<br>SHAP=1.698","None=408<br>s5=0.05803805188793539<br>bmi=-0.050396249164919873<br>SHAP=2.049","None=102<br>s5=-0.005142189801713891<br>bmi=0.028284032228378497<br>SHAP=-0.185","None=221<br>s5=0.0011475759991601464<br>bmi=-0.03854031635223107<br>SHAP=3.073","None=146<br>s5=0.014820979914103668<br>bmi=0.05954058237092167<br>SHAP=-6.225","None=273<br>s5=0.10635074572073594<br>bmi=-0.020217511096257485<br>SHAP=1.665","None=62<br>s5=-0.08237869071592514<br>bmi=-0.007283766209687899<br>SHAP=-0.240","None=107<br>s5=-0.05296264109357657<br>bmi=0.04984027370599448<br>SHAP=0.775","None=101<br>s5=-0.030747917533098208<br>bmi=-0.04500718879551588<br>SHAP=4.637","None=119<br>s5=0.02736404910541198<br>bmi=-0.047162812943277475<br>SHAP=0.992","None=399<br>s5=0.03954249419232167<br>bmi=0.022894971858974496<br>SHAP=-10.521","None=67<br>s5=-0.011896851335695978<br>bmi=-0.014828450726853487<br>SHAP=2.718","None=318<br>s5=0.009433658771615987<br>bmi=0.006727790750762504<br>SHAP=-1.321","None=294<br>s5=-0.07409260794346935<br>bmi=-0.03099563183506548<br>SHAP=2.160","None=391<br>s5=-0.08913335224990723<br>bmi=-0.06979686649477428<br>SHAP=1.495","None=90<br>s5=-0.07213275338232743<br>bmi=-0.02560657146566148<br>SHAP=1.452","None=347<br>s5=0.0037090603325595967<br>bmi=-0.029917819761184662<br>SHAP=2.055","None=422<br>s5=0.04067282891595704<br>bmi=0.07786338762689529<br>SHAP=-12.622","None=377<br>s5=0.009433658771615987<br>bmi=0.009961226972404908<br>SHAP=-3.793","None=315<br>s5=-0.010903250651210127<br>bmi=-0.020217511096257485<br>SHAP=4.346","None=251<br>s5=0.08449153066204618<br>bmi=0.09834181703063047<br>SHAP=-14.126","None=165<br>s5=-0.05615310200706333<br>bmi=-0.06656343027313188<br>SHAP=2.051","None=6<br>s5=-0.06291687914365544<br>bmi=-0.047162812943277475<br>SHAP=1.327","None=230<br>s5=0.050280674066857343<br>bmi=0.07139651518361048<br>SHAP=-3.691","None=186<br>s5=0.04719048478208009<br>bmi=0.0422955891888289<br>SHAP=-8.836","None=433<br>s5=-0.05140387304727299<br>bmi=-0.06009655782984706<br>SHAP=2.257","None=353<br>s5=0.1323757911721786<br>bmi=-0.05578530953432388<br>SHAP=-1.684","None=242<br>s5=-0.07813993550229265<br>bmi=-0.023450947317899894<br>SHAP=1.141","None=171<br>s5=-0.05140387304727299<br>bmi=-0.04608500086939666<br>SHAP=1.464","None=385<br>s5=-0.025953110560258<br>bmi=-0.01913969902237667<br>SHAP=1.247","None=206<br>s5=0.009433658771615987<br>bmi=0.026128408080616904<br>SHAP=-6.994","None=58<br>s5=-0.0006117353045626216<br>bmi=-0.06440780612537028<br>SHAP=0.788","None=331<br>s5=-0.041176166918895155<br>bmi=-0.02560657146566148<br>SHAP=2.346","None=351<br>s5=-0.05780302607946657<br>bmi=-0.040695940499992665<br>SHAP=0.698","None=208<br>s5=-0.0014959487577289358<br>bmi=0.04013996504106731<br>SHAP=-0.505","None=380<br>s5=-0.05140387304727299<br>bmi=0.026128408080616904<br>SHAP=2.650","None=257<br>s5=-0.005142189801713891<br>bmi=-0.05578530953432388<br>SHAP=3.403","None=383<br>s5=-0.018113692315690322<br>bmi=-0.028840007687303888<br>SHAP=4.195","None=18<br>s5=-0.018113692315690322<br>bmi=-0.010517202431330305<br>SHAP=0.672","None=40<br>s5=0.012551194864223063<br>bmi=-0.008361578283568675<br>SHAP=2.441","None=277<br>s5=-0.021395309255276825<br>bmi=-0.05901874575596628<br>SHAP=2.479","None=132<br>s5=-0.012908683225401873<br>bmi=-0.0212953231701383<br>SHAP=3.435","None=213<br>s5=-0.022516528376302174<br>bmi=-0.07087467856865506<br>SHAP=3.122","None=286<br>s5=-0.019198449026275908<br>bmi=-0.05470749746044306<br>SHAP=2.834","None=256<br>s5=0.02802037249332928<br>bmi=0.16085491731571683<br>SHAP=-9.837"],"x":[0.04506654937395887,-0.020292321339471356,-0.05453964034510003,-0.0371288393600719,0.014820979914103668,0.031192602201596156,0.02993464904142137,-0.04688253415273158,0.002861309289833047,-0.03198763948805312,0.04452872881997113,0.05987940361514779,-0.02952642678336326,-0.041176166918895155,0.04234098419358016,-0.018113692315690322,0.02802037249332928,-0.025953110560258,-0.0371288393600719,0.024055085357995654,0.013316905483459898,-0.0683315470939731,-0.042570854118219384,-0.041176166918895155,-0.030747917533098208,0.04613307487932449,-0.06291687914365544,-0.011896851335695978,-0.022516528376302174,0.02736404910541198,0.014820979914103668,0.02337141516224845,0.06123762840403217,-0.03980882652740082,0.04289703595278786,0.04977020032069951,-0.018113692315690322,0.07020738137223513,0.012551194864223063,0.04234098419358016,0.017036071348324546,0.059423623484649676,-0.014959693812643405,-0.025953110560258,0.017765319557121535,0.05803805188793539,-0.005142189801713891,0.0011475759991601464,0.014820979914103668,0.10635074572073594,-0.08237869071592514,-0.05296264109357657,-0.030747917533098208,0.02736404910541198,0.03954249419232167,-0.011896851335695978,0.009433658771615987,-0.07409260794346935,-0.08913335224990723,-0.07213275338232743,0.0037090603325595967,0.04067282891595704,0.009433658771615987,-0.010903250651210127,0.08449153066204618,-0.05615310200706333,-0.06291687914365544,0.050280674066857343,0.04719048478208009,-0.05140387304727299,0.1323757911721786,-0.07813993550229265,-0.05140387304727299,-0.025953110560258,0.009433658771615987,-0.0006117353045626216,-0.041176166918895155,-0.05780302607946657,-0.0014959487577289358,-0.05140387304727299,-0.005142189801713891,-0.018113692315690322,-0.018113692315690322,0.012551194864223063,-0.021395309255276825,-0.012908683225401873,-0.022516528376302174,-0.019198449026275908,0.02802037249332928],"y":[0.9862873400838899,2.7504710331203412,1.5830615191446644,3.3129372333569336,-1.0426281558347785,-10.352642693470973,-10.24208988498203,1.7364242025993546,2.4503153907789987,4.040642365734232,-10.017182335406705,1.7125479494631182,3.9806995346847778,0.8325189064845682,-12.320912182452371,2.3721569851500153,6.615548333540674,2.905840340630022,3.686307343727123,-11.665799727724261,0.15203968961862904,1.5395579909729895,-0.12045408787012055,1.4350416491092355,3.3518397674406453,-11.0437605231404,0.5878395453776293,-0.35369527494674186,1.3260606720621613,-9.951301906478893,3.144809317650665,4.92137642225516,-4.605802078527112,2.2781643428529943,2.160456806505213,-8.20189812366779,3.3383331341276317,-8.409115903789605,-7.403819499604679,0.6679041656501985,-5.485278788984838,4.679455805000379,4.94480462733023,1.5218231132809286,1.697939796443535,2.048927268826622,-0.1853347421198417,3.073468078235874,-6.225188449028353,1.664921292244721,-0.24028017631574128,0.7753198015577745,4.6374736554640625,0.9916097575983442,-10.521459631044817,2.717787204062544,-1.3212844283501834,2.159707454584916,1.4953387261741349,1.4517208854174086,2.054695754136421,-12.6223814326627,-3.79265263310205,4.345629121884482,-14.12564637955957,2.051378944756716,1.3270412943997434,-3.690675294603621,-8.83565504874471,2.2568973666814642,-1.6841244723066695,1.1411900768468417,1.46402110733166,1.2469260973500642,-6.99372348604024,0.7883729552951602,2.3460936471944,0.6979214006070138,-0.5053997637590918,2.649602887976097,3.402597294787838,4.194953492415421,0.6720357511512927,2.440622678662515,2.4788728348973024,3.4345200020516664,3.121739232227391,2.834249943295515,-9.836946796897621],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Interaction plot for s5 and bmi"},"xaxis":{"title":{"text":"s5"}},"yaxis":{"title":{"text":"SHAP value"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div><div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>                <div id="32d88498-3345-4533-bfb6-684a5b463ca8" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("32d88498-3345-4533-bfb6-684a5b463ca8")) {                    Plotly.newPlot(                        "32d88498-3345-4533-bfb6-684a5b463ca8",                        [{"hoverinfo":"text","marker":{"color":[0.04506654937395887,-0.020292321339471356,-0.05453964034510003,-0.0371288393600719,0.014820979914103668,0.031192602201596156,0.02993464904142137,-0.04688253415273158,0.002861309289833047,-0.03198763948805312,0.04452872881997113,0.05987940361514779,-0.02952642678336326,-0.041176166918895155,0.04234098419358016,-0.018113692315690322,0.02802037249332928,-0.025953110560258,-0.0371288393600719,0.024055085357995654,0.013316905483459898,-0.0683315470939731,-0.042570854118219384,-0.041176166918895155,-0.030747917533098208,0.04613307487932449,-0.06291687914365544,-0.011896851335695978,-0.022516528376302174,0.02736404910541198,0.014820979914103668,0.02337141516224845,0.06123762840403217,-0.03980882652740082,0.04289703595278786,0.04977020032069951,-0.018113692315690322,0.07020738137223513,0.012551194864223063,0.04234098419358016,0.017036071348324546,0.059423623484649676,-0.014959693812643405,-0.025953110560258,0.017765319557121535,0.05803805188793539,-0.005142189801713891,0.0011475759991601464,0.014820979914103668,0.10635074572073594,-0.08237869071592514,-0.05296264109357657,-0.030747917533098208,0.02736404910541198,0.03954249419232167,-0.011896851335695978,0.009433658771615987,-0.07409260794346935,-0.08913335224990723,-0.07213275338232743,0.0037090603325595967,0.04067282891595704,0.009433658771615987,-0.010903250651210127,0.08449153066204618,-0.05615310200706333,-0.06291687914365544,0.050280674066857343,0.04719048478208009,-0.05140387304727299,0.1323757911721786,-0.07813993550229265,-0.05140387304727299,-0.025953110560258,0.009433658771615987,-0.0006117353045626216,-0.041176166918895155,-0.05780302607946657,-0.0014959487577289358,-0.05140387304727299,-0.005142189801713891,-0.018113692315690322,-0.018113692315690322,0.012551194864223063,-0.021395309255276825,-0.012908683225401873,-0.022516528376302174,-0.019198449026275908,0.02802037249332928],"colorbar":{"title":{"text":"s5"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=246<br>bmi=-0.0320734439089463<br>s5=0.04506654937395887<br>SHAP=0.986","None=425<br>bmi=-0.040695940499992665<br>s5=-0.020292321339471356<br>SHAP=2.750","None=293<br>bmi=0.09295275666122646<br>s5=-0.05453964034510003<br>SHAP=1.583","None=31<br>bmi=-0.06548561819925106<br>s5=-0.0371288393600719<br>SHAP=3.313","None=359<br>bmi=0.005649978676881689<br>s5=0.014820979914103668<br>SHAP=-1.043","None=437<br>bmi=0.01966153563733209<br>s5=0.031192602201596156<br>SHAP=-10.353","None=290<br>bmi=0.07678557555301448<br>s5=0.02993464904142137<br>SHAP=-10.242","None=439<br>bmi=-0.015906262800734303<br>s5=-0.04688253415273158<br>SHAP=1.736","None=284<br>bmi=-0.022373135244019075<br>s5=0.002861309289833047<br>SHAP=2.450","None=4<br>bmi=-0.03638469220446948<br>s5=-0.03198763948805312<br>SHAP=4.041","None=440<br>bmi=0.039062152967186486<br>s5=0.04452872881997113<br>SHAP=-10.017","None=285<br>bmi=-0.020217511096257485<br>s5=0.05987940361514779<br>SHAP=1.713","None=192<br>bmi=-0.03099563183506548<br>s5=-0.02952642678336326<br>SHAP=3.981","None=389<br>bmi=0.0013387303813585058<br>s5=-0.041176166918895155<br>SHAP=0.833","None=159<br>bmi=0.04337340126270967<br>s5=0.04234098419358016<br>SHAP=-12.321","None=310<br>bmi=0.06492964274032566<br>s5=-0.018113692315690322<br>SHAP=2.372","None=375<br>bmi=-0.002972517914164677<br>s5=0.02802037249332928<br>SHAP=6.616","None=429<br>bmi=-0.033151255982827074<br>s5=-0.025953110560258<br>SHAP=2.906","None=258<br>bmi=-0.02452875939178067<br>s5=-0.0371288393600719<br>SHAP=3.686","None=424<br>bmi=0.011039039046285686<br>s5=0.024055085357995654<br>SHAP=-11.666","None=197<br>bmi=0.0034943545291200974<br>s5=0.013316905483459898<br>SHAP=0.152","None=283<br>bmi=-0.05255187331268147<br>s5=-0.0683315470939731<br>SHAP=1.540","None=373<br>bmi=-0.010517202431330305<br>s5=-0.042570854118219384<br>SHAP=-0.120","None=5<br>bmi=-0.040695940499992665<br>s5=-0.041176166918895155<br>SHAP=1.435","None=128<br>bmi=-0.06225218197760866<br>s5=-0.030747917533098208<br>SHAP=3.352","None=207<br>bmi=0.045529025410471304<br>s5=0.04613307487932449<br>SHAP=-11.044","None=292<br>bmi=-0.022373135244019075<br>s5=-0.06291687914365544<br>SHAP=0.588","None=314<br>bmi=0.04013996504106731<br>s5=-0.011896851335695978<br>SHAP=-0.354","None=304<br>bmi=-0.03854031635223107<br>s5=-0.022516528376302174<br>SHAP=1.326","None=17<br>bmi=0.012116851120166501<br>s5=0.02736404910541198<br>SHAP=-9.951","None=364<br>bmi=-0.006205954135807083<br>s5=0.014820979914103668<br>SHAP=3.145","None=267<br>bmi=-0.0008168937664030856<br>s5=0.02337141516224845<br>SHAP=4.921","None=289<br>bmi=0.055229334075398484<br>s5=0.06123762840403217<br>SHAP=-4.606","None=214<br>bmi=-0.033151255982827074<br>s5=-0.03980882652740082<br>SHAP=2.278","None=78<br>bmi=-0.05794093368208547<br>s5=0.04289703595278786<br>SHAP=2.160","None=421<br>bmi=0.016428099415689682<br>s5=0.04977020032069951<br>SHAP=-8.202","None=47<br>bmi=-0.07303030271641665<br>s5=-0.018113692315690322<br>SHAP=3.338","None=249<br>bmi=0.06061839444480248<br>s5=0.07020738137223513<br>SHAP=-8.409","None=311<br>bmi=0.04013996504106731<br>s5=0.012551194864223063<br>SHAP=-7.404","None=65<br>bmi=-0.02452875939178067<br>s5=0.04234098419358016<br>SHAP=0.668","None=174<br>bmi=0.009961226972404908<br>s5=0.017036071348324546<br>SHAP=-5.485","None=29<br>bmi=-0.006205954135807083<br>s5=0.059423623484649676<br>SHAP=4.679","None=431<br>bmi=-0.03099563183506548<br>s5=-0.014959693812643405<br>SHAP=4.945","None=299<br>bmi=-0.013750638652972673<br>s5=-0.025953110560258<br>SHAP=1.522","None=164<br>bmi=-0.01913969902237667<br>s5=0.017765319557121535<br>SHAP=1.698","None=408<br>bmi=-0.050396249164919873<br>s5=0.05803805188793539<br>SHAP=2.049","None=102<br>bmi=0.028284032228378497<br>s5=-0.005142189801713891<br>SHAP=-0.185","None=221<br>bmi=-0.03854031635223107<br>s5=0.0011475759991601464<br>SHAP=3.073","None=146<br>bmi=0.05954058237092167<br>s5=0.014820979914103668<br>SHAP=-6.225","None=273<br>bmi=-0.020217511096257485<br>s5=0.10635074572073594<br>SHAP=1.665","None=62<br>bmi=-0.007283766209687899<br>s5=-0.08237869071592514<br>SHAP=-0.240","None=107<br>bmi=0.04984027370599448<br>s5=-0.05296264109357657<br>SHAP=0.775","None=101<br>bmi=-0.04500718879551588<br>s5=-0.030747917533098208<br>SHAP=4.637","None=119<br>bmi=-0.047162812943277475<br>s5=0.02736404910541198<br>SHAP=0.992","None=399<br>bmi=0.022894971858974496<br>s5=0.03954249419232167<br>SHAP=-10.521","None=67<br>bmi=-0.014828450726853487<br>s5=-0.011896851335695978<br>SHAP=2.718","None=318<br>bmi=0.006727790750762504<br>s5=0.009433658771615987<br>SHAP=-1.321","None=294<br>bmi=-0.03099563183506548<br>s5=-0.07409260794346935<br>SHAP=2.160","None=391<br>bmi=-0.06979686649477428<br>s5=-0.08913335224990723<br>SHAP=1.495","None=90<br>bmi=-0.02560657146566148<br>s5=-0.07213275338232743<br>SHAP=1.452","None=347<br>bmi=-0.029917819761184662<br>s5=0.0037090603325595967<br>SHAP=2.055","None=422<br>bmi=0.07786338762689529<br>s5=0.04067282891595704<br>SHAP=-12.622","None=377<br>bmi=0.009961226972404908<br>s5=0.009433658771615987<br>SHAP=-3.793","None=315<br>bmi=-0.020217511096257485<br>s5=-0.010903250651210127<br>SHAP=4.346","None=251<br>bmi=0.09834181703063047<br>s5=0.08449153066204618<br>SHAP=-14.126","None=165<br>bmi=-0.06656343027313188<br>s5=-0.05615310200706333<br>SHAP=2.051","None=6<br>bmi=-0.047162812943277475<br>s5=-0.06291687914365544<br>SHAP=1.327","None=230<br>bmi=0.07139651518361048<br>s5=0.050280674066857343<br>SHAP=-3.691","None=186<br>bmi=0.0422955891888289<br>s5=0.04719048478208009<br>SHAP=-8.836","None=433<br>bmi=-0.06009655782984706<br>s5=-0.05140387304727299<br>SHAP=2.257","None=353<br>bmi=-0.05578530953432388<br>s5=0.1323757911721786<br>SHAP=-1.684","None=242<br>bmi=-0.023450947317899894<br>s5=-0.07813993550229265<br>SHAP=1.141","None=171<br>bmi=-0.04608500086939666<br>s5=-0.05140387304727299<br>SHAP=1.464","None=385<br>bmi=-0.01913969902237667<br>s5=-0.025953110560258<br>SHAP=1.247","None=206<br>bmi=0.026128408080616904<br>s5=0.009433658771615987<br>SHAP=-6.994","None=58<br>bmi=-0.06440780612537028<br>s5=-0.0006117353045626216<br>SHAP=0.788","None=331<br>bmi=-0.02560657146566148<br>s5=-0.041176166918895155<br>SHAP=2.346","None=351<br>bmi=-0.040695940499992665<br>s5=-0.05780302607946657<br>SHAP=0.698","None=208<br>bmi=0.04013996504106731<br>s5=-0.0014959487577289358<br>SHAP=-0.505","None=380<br>bmi=0.026128408080616904<br>s5=-0.05140387304727299<br>SHAP=2.650","None=257<br>bmi=-0.05578530953432388<br>s5=-0.005142189801713891<br>SHAP=3.403","None=383<br>bmi=-0.028840007687303888<br>s5=-0.018113692315690322<br>SHAP=4.195","None=18<br>bmi=-0.010517202431330305<br>s5=-0.018113692315690322<br>SHAP=0.672","None=40<br>bmi=-0.008361578283568675<br>s5=0.012551194864223063<br>SHAP=2.441","None=277<br>bmi=-0.05901874575596628<br>s5=-0.021395309255276825<br>SHAP=2.479","None=132<br>bmi=-0.0212953231701383<br>s5=-0.012908683225401873<br>SHAP=3.435","None=213<br>bmi=-0.07087467856865506<br>s5=-0.022516528376302174<br>SHAP=3.122","None=286<br>bmi=-0.05470749746044306<br>s5=-0.019198449026275908<br>SHAP=2.834","None=256<br>bmi=0.16085491731571683<br>s5=0.02802037249332928<br>SHAP=-9.837"],"x":[-0.0320734439089463,-0.040695940499992665,0.09295275666122646,-0.06548561819925106,0.005649978676881689,0.01966153563733209,0.07678557555301448,-0.015906262800734303,-0.022373135244019075,-0.03638469220446948,0.039062152967186486,-0.020217511096257485,-0.03099563183506548,0.0013387303813585058,0.04337340126270967,0.06492964274032566,-0.002972517914164677,-0.033151255982827074,-0.02452875939178067,0.011039039046285686,0.0034943545291200974,-0.05255187331268147,-0.010517202431330305,-0.040695940499992665,-0.06225218197760866,0.045529025410471304,-0.022373135244019075,0.04013996504106731,-0.03854031635223107,0.012116851120166501,-0.006205954135807083,-0.0008168937664030856,0.055229334075398484,-0.033151255982827074,-0.05794093368208547,0.016428099415689682,-0.07303030271641665,0.06061839444480248,0.04013996504106731,-0.02452875939178067,0.009961226972404908,-0.006205954135807083,-0.03099563183506548,-0.013750638652972673,-0.01913969902237667,-0.050396249164919873,0.028284032228378497,-0.03854031635223107,0.05954058237092167,-0.020217511096257485,-0.007283766209687899,0.04984027370599448,-0.04500718879551588,-0.047162812943277475,0.022894971858974496,-0.014828450726853487,0.006727790750762504,-0.03099563183506548,-0.06979686649477428,-0.02560657146566148,-0.029917819761184662,0.07786338762689529,0.009961226972404908,-0.020217511096257485,0.09834181703063047,-0.06656343027313188,-0.047162812943277475,0.07139651518361048,0.0422955891888289,-0.06009655782984706,-0.05578530953432388,-0.023450947317899894,-0.04608500086939666,-0.01913969902237667,0.026128408080616904,-0.06440780612537028,-0.02560657146566148,-0.040695940499992665,0.04013996504106731,0.026128408080616904,-0.05578530953432388,-0.028840007687303888,-0.010517202431330305,-0.008361578283568675,-0.05901874575596628,-0.0212953231701383,-0.07087467856865506,-0.05470749746044306,0.16085491731571683],"y":[0.9862873400838914,2.750471033120339,1.5830615191446626,3.312937233356932,-1.04262815583478,-10.35264269347097,-10.24208988498203,1.7364242025993557,2.4503153907789974,4.040642365734232,-10.017182335406703,1.71254794946312,3.9806995346847778,0.8325189064845685,-12.32091218245237,2.3721569851500135,6.615548333540672,2.905840340630021,3.686307343727123,-11.665799727724263,0.1520396896186279,1.5395579909729895,-0.12045408787012038,1.4350416491092364,3.3518397674406426,-11.043760523140397,0.5878395453776293,-0.353695274946742,1.3260606720621622,-9.95130190647889,3.1448093176506635,4.921376422255161,-4.605802078527112,2.2781643428529943,2.1604568065052154,-8.20189812366779,3.33833313412763,-8.409115903789608,-7.403819499604681,0.6679041656502003,-5.4852787889848384,4.679455805000381,4.94480462733023,1.5218231132809301,1.697939796443536,2.048927268826624,-0.1853347421198397,3.0734680782358748,-6.225188449028355,1.6649212922447216,-0.24028017631574006,0.7753198015577734,4.637473655464065,0.9916097575983464,-10.521459631044822,2.717787204062544,-1.3212844283501832,2.1597074545849164,1.4953387261741355,1.4517208854174086,2.05469575413642,-12.622381432662703,-3.7926526331020516,4.345629121884483,-14.12564637955957,2.051378944756718,1.327041294399743,-3.690675294603621,-8.835655048744709,2.2568973666814642,-1.6841244723066642,1.1411900768468441,1.4640211073316618,1.2469260973500649,-6.993723486040239,0.7883729552951604,2.3460936471944005,0.6979214006070139,-0.5053997637590941,2.6496028879760973,3.402597294787838,4.19495349241542,0.6720357511512923,2.4406226786625127,2.4788728348973024,3.4345200020516664,3.121739232227388,2.834249943295515,-9.836946796897617],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Interaction plot for bmi and s5"},"xaxis":{"title":{"text":"bmi"}},"yaxis":{"title":{"text":"SHAP value"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab5"
+     role="tabpanel" aria-labelledby="myTab5-tab"> <div><H1>Decision Trees</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Select Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected index: <b>None</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Decision Trees</h3><h6 class="card-subtitle">Displaying individual decision trees inside Random Forest</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+no index selected
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Decision path table</h3><h6 class="card-subtitle">Decision path through decision tree</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+no tree selected
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+</div>
+<script type="text/javascript">
+var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
+    tabTrigger.show()
+    window.dispatchEvent(new Event('resize'));
+  })
+})
+</script>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+window.dispatchEvent(new Event('resize'));
+</script>
+        
+</html>
+    
